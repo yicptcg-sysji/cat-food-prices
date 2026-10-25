@@ -131,6 +131,11 @@ def offer_view(o, unit_word):
             "price": num(nc.get("after_cashback_price_eur")),
         }
     ot = one_time_unit(o)
+    ug = num(o.get("unit_g"))
+    per100 = (lambda v: round(v / ug * 100, 3) if (v is not None and ug) else None)
+    if new_cust:
+        new_cust["per100g"] = per100(new_cust["unit"])
+    ot_show = ot if (ot is not None and u is not None and ot > u + 1e-9) else None
     return {
         "shop": o.get("shop"),
         "variant": o.get("variant"),
@@ -142,7 +147,8 @@ def offer_view(o, unit_word):
         "per100g": h,
         "basis": basis_label(b),
         "autoship": k in AUTOSHIP_BASES,
-        "one_time_unit": ot if (ot is not None and u is not None and ot > u + 1e-9) else None,
+        "one_time_unit": ot_show,
+        "one_time_per100g": per100(ot_show),
         "conditions": [c for c in conds if c],
         "new_customer": new_cust,
         "in_stock": o.get("stock") == "in_stock",
@@ -227,7 +233,8 @@ def build(src: Path):
         for c in main:
             v = c["unit"] if not c["autoship"] else c["one_time_unit"]
             if v is not None and (ot_best is None or v / (c["unit_g"] or 1) < ot_best["unit"] / (ot_best["unit_g"] or 1)):
-                ot_best = {"shop": c["shop"], "variant": c["variant"], "unit": v, "unit_g": c["unit_g"], "url": c["url"]}
+                ot_best = {"shop": c["shop"], "variant": c["variant"], "unit": v, "unit_g": c["unit_g"], "url": c["url"],
+                           "per100g": round(v / c["unit_g"] * 100, 3) if c["unit_g"] else None}
 
         target = None
         if meta.get("target") and best:
@@ -238,6 +245,12 @@ def build(src: Path):
                       "reached": gap <= 1e-9, "gap_unit": round(gap, 3),
                       "gap_pct": round(gap / tu * 100, 1),
                       "equiv_pack": round(best["unit"] * t["units"], 2)}
+            ug = num(best.get("unit_g"))
+            if ug and best["per100g"] is not None:
+                t100 = tu / ug * 100
+                g100 = best["per100g"] - t100
+                target.update({"unit_g": ug, "per100g": round(t100, 3), "gap_per100g": round(g100, 3),
+                               "reached": g100 <= 1e-9, "gap_pct": round(g100 / t100 * 100, 1)})
 
         img = meta.get("image")
         img_out = None

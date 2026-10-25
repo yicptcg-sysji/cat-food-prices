@@ -5,6 +5,7 @@
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
   function eur(v,d){return v==null?"—":"€"+Number(v).toFixed(d==null?2:d);}
   function variant(v){return esc(String(v||"").replace(/(\d)\s*x\s*(\d)/gi,"$1×$2"));}
+  function p100(v){return v==null?"—":'<b class="p100 num">'+eur(v)+'<span class="u100">/100g</span></b>';}
   function shortDate(iso){var p=iso.split("-");return (+p[1])+"/"+(+p[2]);}
   var ARROW='<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.2 5.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 1 1-1.4-1.4l4.3-4.3H4a1 1 0 1 1 0-2h13.5l-4.3-4.3a1 1 0 0 1 0-1.4z"/></svg>';
   var CHEV='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.3 9.3a1 1 0 0 1 1.4 0L12 13.6l4.3-4.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 0-1.4z"/></svg>';
@@ -17,15 +18,18 @@
   // 目標
   D.products.forEach(function(p){
     var t=p.target; if(!t) return;
-    var fill=Math.min(100, t.unit/p.best.unit*100);
+    var u=p.unit_word, h=t.per100g!=null;
+    var tv=h?t.per100g:t.unit, bv=h?p.best.per100g:p.best.unit, gv=h?t.gap_per100g:t.gap_unit, un=h?'100g':u;
+    var fill=Math.min(100, tv/bv*100);
     html.push('<section class="target" aria-label="目標價">'+
-      '<div class="row"><h2>🎯 '+esc(p.brand)+' 目標：'+t.units+' 包 '+eur(t.price_eur,0)+'（'+eur(t.unit)+'/包）</h2>'+
+      '<div class="row"><h2>🎯 '+esc(p.brand)+' 目標：<strong class="num">'+eur(tv)+'</strong>/'+esc(un)+'<span class="sec">（'+t.units+' '+esc(u)+' '+eur(t.price_eur,0)+'）</span></h2>'+
       (t.reached?'<span class="status yes">已達成</span>':'<span class="status no">尚未達成</span>')+'</div>'+
       '<p class="big">'+(t.reached
-        ? '目前最低 <strong class="num">'+eur(p.best.unit)+'</strong>/包，已低於目標！'
-        : '目前最低 <strong class="num">'+eur(p.best.unit)+'</strong>/包（'+t.units+' 包約 '+eur(t.equiv_pack)+'），還差 <strong class="num">'+eur(t.gap_unit)+'</strong>/包（'+t.gap_pct.toFixed(0)+'%）')+'</p>'+
+        ? '目前最低 <strong class="num">'+eur(bv)+'</strong>/'+esc(un)+'，已低於目標！'
+        : '目前最低 <strong class="num">'+eur(bv)+'</strong>/'+esc(un)+'，還差 <strong class="num">'+eur(gv)+'</strong>/'+esc(un)+'（'+t.gap_pct.toFixed(0)+'%）')+
+      (h?'<span class="sec">'+eur(p.best.unit)+'/'+esc(u)+'・'+t.units+' '+esc(u)+'約 '+eur(t.equiv_pack)+'</span>':'')+'</p>'+
       (t.reached?'':'<div class="bar" role="img" aria-label="目標價占目前價格的比例"><i style="width:'+fill.toFixed(1)+'%"></i></div>'+
-      '<div class="bar-legend"><span>目標 '+eur(t.unit)+'</span><span>差 '+eur(t.gap_unit)+'</span></div>')+
+      '<div class="bar-legend"><span>目標 '+eur(tv)+'/'+esc(un)+'</span><span>差 '+eur(gv)+'/'+esc(un)+'</span></div>')+
     '</section>');
   });
 
@@ -69,14 +73,14 @@
     if(!b){
       s += '<div class="where">目前沒有已核實、有庫存的報價。</div></div>';
     } else {
-      s += '<div class="deal"><div class="price">'+(p.mixed_sizes
-        ? '<div class="lbl">最低價</div><div class="val num">'+eur(b.per100g)+'<small>/100g</small></div><div class="per num">'+eur(b.unit)+' / '+esc(b.unit_g)+'g '+esc(u)+'</div>'
-        : '<div class="lbl">最低每'+esc(u)+'</div><div class="val num">'+eur(b.unit)+'<small>/'+esc(u)+'</small></div><div class="per num">'+eur(b.per100g)+' / 100g</div>')+'</div>';
+      s += '<div class="deal"><div class="price">'+(b.per100g!=null
+        ? '<div class="lbl">每 100g 最低價</div><div class="val num">'+eur(b.per100g)+'<small>/100g</small></div><div class="per num">'+eur(b.unit)+'/'+esc(u)+'（'+esc(b.unit_g)+'g）</div>'
+        : '<div class="lbl">最低每'+esc(u)+'</div><div class="val num">'+eur(b.unit)+'<small>/'+esc(u)+'</small></div>')+'</div>';
       s += '<a class="buy" href="'+esc(b.url)+'" target="_blank" rel="noopener nofollow">前往 '+esc(b.shop)+' '+ARROW+'</a></div>';
       s += '<div class="where"><b>'+esc(b.shop)+'</b>・'+variant(b.variant)+'・'+esc(b.basis)+' <span class="num">'+eur(b.price)+'</span><span class="cond">'+esc(b.conditions.join("・"))+'</span></div>';
       if(p.one_time_best){
         var o=p.one_time_best;
-        s += '<div class="alt">不想訂閱？單次購買最低：<a href="'+esc(o.url)+'" target="_blank" rel="noopener nofollow">'+esc(o.shop)+'</a> '+variant(o.variant)+' <span class="num">'+(p.mixed_sizes?eur(o.unit/o.unit_g*100)+'</span>/100g':eur(o.unit)+'</span>/'+esc(u))+'</div>';
+        s += '<div class="alt">不想訂閱？單次購買最低：<a href="'+esc(o.url)+'" target="_blank" rel="noopener nofollow">'+esc(o.shop)+'</a> '+variant(o.variant)+' '+(o.per100g!=null?p100(o.per100g):'<span class="num">'+eur(o.unit)+'</span>/'+esc(u))+'</div>';
       }
       s += '</div>';
     }
@@ -96,12 +100,12 @@
       var o=g.items[0], main=g.main;
       if(main) rank++;
       var tags = o.conditions.map(function(c){return '<span class="tag">'+esc(c)+'</span>';}).join("");
-      if(o.new_customer) tags += '<span class="tag nc">新客首單 '+eur(o.new_customer.unit)+'/'+esc(u)+'</span>';
-      if(o.one_time_unit) tags += '<span class="tag">單次 '+eur(o.one_time_unit)+'/'+esc(u)+'</span>';
+      if(o.new_customer) tags += '<span class="tag nc">新客首單 '+(o.new_customer.per100g!=null?eur(o.new_customer.per100g)+'/100g':eur(o.new_customer.unit)+'/'+esc(u))+'</span>';
+      if(o.one_time_unit) tags += '<span class="tag">單次 '+(o.one_time_per100g!=null?eur(o.one_time_per100g)+'/100g':eur(o.one_time_unit)+'/'+esc(u))+'</span>';
       var st = !o.in_stock ? "缺貨" : (o.status==="partly_verified" ? "部分核實" : (o.verified ? "" : "未核實"));
-      var rest = g.items.slice(1).map(function(x){return variant(x.variant)+' '+(p.mixed_sizes?eur(x.per100g)+'/100g':eur(x.unit)+'/'+esc(u));}).join("、");
-      var bigv = p.mixed_sizes ? eur(o.per100g)+'<span class="h">/100g</span>' : eur(o.unit)+'<span class="h">/'+esc(u)+'</span>';
-      var smallv = p.mixed_sizes ? eur(o.unit)+'/'+esc(o.unit_g)+'g' : eur(o.per100g)+'/100g';
+      var rest = g.items.slice(1).map(function(x){return variant(x.variant)+' '+(x.per100g!=null?'<b class="num">'+eur(x.per100g)+'</b>/100g':eur(x.unit)+'/'+esc(u));}).join("、");
+      var bigv = o.per100g!=null ? eur(o.per100g)+'<span class="h">/100g</span>' : eur(o.unit)+'<span class="h">/'+esc(u)+'</span>';
+      var smallv = o.per100g!=null ? eur(o.unit)+'/'+esc(u)+'（'+esc(o.unit_g)+'g）' : '';
       s += '<li class="offer'+(main?'':' dim')+(main&&rank===1?' top':'')+'"'+(main?'':' hidden')+'>'+
         '<span class="rank">'+(main?rank:'–')+'</span>'+
         '<div class="o-name"><div class="s">'+esc(o.shop)+(st?' <span class="st">'+st+'</span>':'')+'</div>'+
@@ -118,29 +122,32 @@
   }
 
   function chart(p){
-    var h=p.history, u=p.unit_word;
-    var s='<div class="chart"><h4>每'+esc(u)+'最低價走勢</h4>';
+    var u=p.unit_word, use100=p.history.every(function(x){return x.per100g!=null;});
+    var h=p.history.map(function(x){return {date:x.date, v:use100?x.per100g:x.unit};});
+    var un=use100?'100g':u;
+    var tgt=p.target?(use100?p.target.per100g:p.target.unit):null;
+    var s='<div class="chart"><h4>每 '+esc(un)+' 最低價走勢</h4>';
     if(h.length<2){
       var last=h[h.length-1];
-      s+='<div class="empty">目前只有 '+(last?shortDate(last.date)+' 一天':'')+'的資料'+(last?'（'+eur(last.unit)+'/'+esc(u)+'）':'')+'，累積更多天數後會顯示價格走勢。</div></div>';
+      s+='<div class="empty">目前只有 '+(last?shortDate(last.date)+' 一天':'')+'的資料'+(last?'（<b class="num">'+eur(last.v)+'</b>/'+esc(un)+'）':'')+'，累積更多天數後會顯示價格走勢。</div></div>';
       return s;
     }
     var W=340,H=130,L=40,R=10,T=12,B=22;
-    var vals=h.map(function(x){return x.unit;});
-    if(p.target) vals.push(p.target.unit);
+    var vals=h.map(function(x){return x.v;});
+    if(tgt!=null) vals.push(tgt);
     var mn=Math.min.apply(null,vals), mx=Math.max.apply(null,vals);
     var pad=(mx-mn)*0.15||0.1; mn-=pad; mx+=pad;
     var x=function(i){return L+(W-L-R)*(h.length===1?0.5:i/(h.length-1));};
     var y=function(v){return T+(H-T-B)*(1-(v-mn)/(mx-mn));};
-    var pts=h.map(function(d,i){return x(i).toFixed(1)+","+y(d.unit).toFixed(1);});
+    var pts=h.map(function(d,i){return x(i).toFixed(1)+","+y(d.v).toFixed(1);});
     var g='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="價格走勢圖">';
     [mn+pad, (mn+mx)/2, mx-pad].forEach(function(v){
       g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v).toFixed(1)+'" y2="'+y(v).toFixed(1)+'" stroke="#efe7df"/>';
       g+='<text x="'+(L-6)+'" y="'+(y(v)+4).toFixed(1)+'" font-size="10" text-anchor="end" fill="#8a807a">€'+v.toFixed(2)+'</text>';
     });
-    if(p.target){ var ty=y(p.target.unit).toFixed(1); g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+ty+'" y2="'+ty+'" stroke="#0f7a55" stroke-dasharray="4 4"/><text x="'+(W-R)+'" y="'+(ty-4)+'" font-size="10" text-anchor="end" fill="#0f7a55">目標</text>'; }
+    if(tgt!=null){ var ty=y(tgt).toFixed(1); g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+ty+'" y2="'+ty+'" stroke="#0f7a55" stroke-dasharray="4 4"/><text x="'+(W-R)+'" y="'+(ty-4)+'" font-size="10" text-anchor="end" fill="#0f7a55">目標</text>'; }
     g+='<polyline fill="none" stroke="#e8573a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="'+pts.join(" ")+'"/>';
-    h.forEach(function(d,i){ g+='<circle cx="'+x(i).toFixed(1)+'" cy="'+y(d.unit).toFixed(1)+'" r="3.5" fill="#fff" stroke="#e8573a" stroke-width="2"><title>'+d.date+'：€'+d.unit.toFixed(2)+'</title></circle>'; });
+    h.forEach(function(d,i){ g+='<circle cx="'+x(i).toFixed(1)+'" cy="'+y(d.v).toFixed(1)+'" r="3.5" fill="#fff" stroke="#e8573a" stroke-width="2"><title>'+d.date+'：€'+d.v.toFixed(2)+'/'+un+'</title></circle>'; });
     var step=Math.max(1,Math.ceil(h.length/6));
     h.forEach(function(d,i){ if(i%step===0||i===h.length-1) g+='<text x="'+x(i).toFixed(1)+'" y="'+(H-6)+'" font-size="10" text-anchor="middle" fill="#8a807a">'+shortDate(d.date)+'</text>'; });
     g+='</svg>';

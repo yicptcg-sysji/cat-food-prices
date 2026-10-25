@@ -3,7 +3,7 @@
  "updated": "2026-10-25",
  "updated_zh": "2026年10月25日",
  "next_zh": "10月27日",
- "generated_zh": "2026-10-25 14:54",
+ "generated_zh": "2026-10-25 16:40",
  "location": "鹿特丹",
  "products": [
   {
@@ -27,6 +27,7 @@
     "basis": "定期配送價",
     "autoship": true,
     "one_time_unit": 1.535,
+    "one_time_per100g": 1.806,
     "conditions": [
      "滿 €29 免運",
      "需訂閱定期配送"
@@ -35,7 +36,8 @@
      "portal": "CashbackXL",
      "rate_pct": 10.0,
      "unit": 1.424,
-     "price": 68.33
+     "price": 68.33,
+     "per100g": 1.675
     },
     "in_stock": true,
     "verified": true,
@@ -48,7 +50,8 @@
     "variant": "12x85g",
     "unit": 1.402,
     "unit_g": 85,
-    "url": "https://www.petgamma.com/nl/p/12x-kitten-sterilised-gravy-kattenvoer-nat-85-gr"
+    "url": "https://www.petgamma.com/nl/p/12x-kitten-sterilised-gravy-kattenvoer-nat-85-gr",
+    "per100g": 1.649
    },
    "badge": {
     "kind": "first",
@@ -61,7 +64,10 @@
     "reached": false,
     "gap_unit": 0.236,
     "gap_pct": 21.8,
-    "equiv_pack": 15.83
+    "equiv_pack": 15.83,
+    "unit_g": 85.0,
+    "per100g": 1.275,
+    "gap_per100g": 0.277
    },
    "history": [
     {
@@ -84,6 +90,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.535,
+     "one_time_per100g": 1.806,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -92,7 +99,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 1.424,
-      "price": 68.33
+      "price": 68.33,
+      "per100g": 1.675
      },
      "in_stock": true,
      "verified": true,
@@ -112,6 +120,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.545,
+     "one_time_per100g": 1.818,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -120,7 +129,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 1.433,
-      "price": 34.39
+      "price": 34.39,
+      "per100g": 1.686
      },
      "in_stock": true,
      "verified": true,
@@ -140,6 +150,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.548,
+     "one_time_per100g": 1.821,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -148,7 +159,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 1.437,
-      "price": 17.24
+      "price": 17.24,
+      "per100g": 1.691
      },
      "in_stock": true,
      "verified": true,
@@ -168,6 +180,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.452,
+     "one_time_per100g": 1.708,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -191,6 +204,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.47,
+     "one_time_per100g": 1.729,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -214,6 +228,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.402,
+     "one_time_per100g": 1.649,
      "conditions": [
       "滿 €50 免運",
       "需訂閱定期配送"
@@ -237,6 +252,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 1.499,
+     "one_time_per100g": 1.764,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -260,6 +276,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €35 免運"
      ],
@@ -282,6 +299,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €39 免運",
       "經 ShopBuddies 返現 €0.80"
@@ -305,6 +323,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €69 免運"
      ],
@@ -327,6 +346,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €35 免運"
      ],
@@ -349,6 +369,7 @@
      "basis": "含運費",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "運費 €4.95"
      ],
@@ -371,6 +392,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €39 免運"
      ],
@@ -393,6 +415,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "運費 €4.95・最低訂單 €14.95",
       "經 CashbackXL 返現 €0.65"
@@ -416,6 +439,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "免運",
       "經 CashbackXL 返現 €5.43"
@@ -424,7 +448,8 @@
       "portal": "CashbackXL",
       "rate_pct": 15.0,
       "unit": 1.6,
-      "price": 76.8
+      "price": 76.8,
+      "per100g": 1.882
      },
      "in_stock": true,
      "verified": false,
@@ -444,6 +469,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "免運",
       "經 CashbackXL 返現 €1.55"
@@ -452,7 +478,8 @@
       "portal": "CashbackXL",
       "rate_pct": 15.0,
       "unit": 1.821,
-      "price": 21.85
+      "price": 21.85,
+      "per100g": 2.142
      },
      "in_stock": true,
      "verified": false,
@@ -472,6 +499,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "依賣家而定"
      ],
@@ -508,6 +536,7 @@
     "basis": "定期配送價",
     "autoship": true,
     "one_time_unit": 2.882,
+    "one_time_per100g": 0.721,
     "conditions": [
      "滿 €29 免運",
      "需訂閱定期配送"
@@ -524,7 +553,8 @@
     "variant": "6x400g Kitten 小牛＋雞心",
     "unit": 2.882,
     "unit_g": 400,
-    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6"
+    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
+    "per100g": 0.721
    },
    "badge": {
     "kind": "first",
@@ -552,6 +582,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 2.882,
+     "one_time_per100g": 0.721,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -575,6 +606,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運"
      ],
@@ -597,6 +629,7 @@
      "basis": "購物車折扣",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運"
      ],
@@ -619,6 +652,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €45 免運"
      ],
@@ -641,6 +675,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運",
       "經 ShopBuddies 返現 €0.12"
@@ -649,7 +684,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 1.727,
-      "price": 10.36
+      "price": 10.36,
+      "per100g": 0.864
      },
      "in_stock": true,
      "verified": true,
@@ -669,6 +705,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €45 免運"
      ],
@@ -691,6 +728,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運"
      ],
@@ -713,6 +751,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運",
       "經 ShopBuddies 返現 €0.14"
@@ -721,7 +760,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 1.91,
-      "price": 11.46
+      "price": 11.46,
+      "per100g": 0.955
      },
      "in_stock": true,
      "verified": true,
@@ -741,6 +781,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運"
      ],
@@ -777,6 +818,7 @@
     "basis": "定期配送價",
     "autoship": true,
     "one_time_unit": 2.248,
+    "one_time_per100g": 1.124,
     "conditions": [
      "滿 €29 免運",
      "需訂閱定期配送"
@@ -793,7 +835,8 @@
     "variant": "Mixpack 6x200g",
     "unit": 2.248,
     "unit_g": 200,
-    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750481"
+    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750481",
+    "per100g": 1.124
    },
    "badge": {
     "kind": "first",
@@ -821,6 +864,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 2.248,
+     "one_time_per100g": 1.124,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -844,6 +888,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 2.3,
+     "one_time_per100g": 1.15,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -867,6 +912,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 2.365,
+     "one_time_per100g": 1.183,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -890,6 +936,7 @@
      "basis": "定期配送價",
      "autoship": true,
      "one_time_unit": 2.383,
+     "one_time_per100g": 1.192,
      "conditions": [
       "滿 €29 免運",
       "需訂閱定期配送"
@@ -913,6 +960,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €45 免運"
      ],
@@ -935,6 +983,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運",
       "經 ShopBuddies 返現 €0.16"
@@ -943,7 +992,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 2.185,
-      "price": 13.11
+      "price": 13.11,
+      "per100g": 1.093
      },
      "in_stock": true,
      "verified": true,
@@ -963,6 +1013,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運",
       "經 ShopBuddies 返現 €0.63"
@@ -971,7 +1022,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 2.198,
-      "price": 52.74
+      "price": 52.74,
+      "per100g": 1.099
      },
      "in_stock": true,
      "verified": true,
@@ -991,6 +1043,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €29 免運",
       "經 ShopBuddies 返現 €0.16"
@@ -999,7 +1052,8 @@
       "portal": "CashbackXL",
       "rate_pct": 10.0,
       "unit": 2.262,
-      "price": 13.57
+      "price": 13.57,
+      "per100g": 1.131
      },
      "in_stock": true,
      "verified": true,
@@ -1019,6 +1073,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €64.90 免運"
      ],
@@ -1041,6 +1096,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €64.90 免運"
      ],
@@ -1077,6 +1133,7 @@
     "basis": "單次購買",
     "autoship": false,
     "one_time_unit": null,
+    "one_time_per100g": null,
     "conditions": [
      "滿 €45 免運"
     ],
@@ -1114,6 +1171,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €45 免運"
      ],
@@ -1136,6 +1194,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €45 免運"
      ],
@@ -1158,6 +1217,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "取貨點滿 €49 免運・宅配滿 €79 免運"
      ],
@@ -1180,6 +1240,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "滿 €65 免運"
      ],
@@ -1202,6 +1263,7 @@
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "運費 €4.95・最低訂單 €14.95",
       "經 CashbackXL 返現 €1.75"
@@ -1225,6 +1287,7 @@
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
       "運費未知"
      ],
