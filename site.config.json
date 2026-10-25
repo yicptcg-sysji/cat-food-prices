@@ -1,0 +1,41 @@
+{
+  "source_dir": "/cursor/stores/store-07c67034-b23d-4a5a-9f26-e791b261bad1/cat-wetfood",
+  "site_title": "幼貓濕食比價",
+  "update_interval_days": 2,
+  "product_order": ["rc_kitten_sterilised_gravy", "macs_kitten", "mjamjam_kitten", "farmina_nd_ocean_kitten"],
+  "products": {
+    "rc_kitten_sterilised_gravy": {
+      "brand": "Royal Canin",
+      "name": "Kitten Sterilised in Gravy",
+      "desc": "結紮幼貓・肉汁餐包",
+      "pack": "85g 餐包",
+      "unit_word": "包",
+      "image": "assets/products/rc_kitten_sterilised_gravy.webp",
+      "target": {"units": 12, "price_eur": 13.0}
+    },
+    "mjamjam_kitten": {
+      "brand": "MjAMjAM",
+      "name": "Kitten",
+      "desc": "幼貓主食罐",
+      "pack": "200g 罐",
+      "unit_word": "罐",
+      "image": "assets/products/mjamjam_kitten.webp"
+    },
+    "macs_kitten": {
+      "brand": "MAC's",
+      "name": "Kitten",
+      "desc": "幼貓主食罐",
+      "pack": "200g／400g 罐",
+      "unit_word": "罐",
+      "image": "assets/products/macs_kitten.webp"
+    },
+    "farmina_nd_ocean_kitten": {
+      "brand": "Farmina N&D",
+      "name": "Ocean Kitten",
+      "desc": "鮪魚・鱈魚・蝦・南瓜",
+      "pack": "70g 罐",
+      "unit_word": "罐",
+      "image": "assets/products/farmina_nd_ocean_kitten.webp"
+    }
+  }
+}
