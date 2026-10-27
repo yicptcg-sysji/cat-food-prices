@@ -23,11 +23,12 @@
     var fill=Math.min(100, tv/bv*100);
     html.push('<section class="target" aria-label="目標價">'+
       '<div class="row"><h2>🎯 '+esc(p.brand)+' 目標：<strong class="num">'+eur(tv)+'</strong>/'+esc(un)+'<span class="sec">（'+t.units+' '+esc(u)+' '+eur(t.price_eur,0)+'）</span></h2>'+
-      (t.reached?'<span class="status yes">已達成</span>':'<span class="status no">尚未達成</span>')+'</div>'+
+      (t.reached?'<span class="status yes">已達標</span>':'<span class="status no">尚未達標</span>')+'</div>'+
       '<p class="big">'+(t.reached
-        ? '目前最低 <strong class="num">'+eur(bv)+'</strong>/'+esc(un)+'，已低於目標！'
+        ? '目前最低 <strong class="num">'+eur(bv)+'</strong>/'+esc(un)+(t.below_pct>0?'，已低於目標！':'，剛好達到目標價！')
         : '目前最低 <strong class="num">'+eur(bv)+'</strong>/'+esc(un)+'，還差 <strong class="num">'+eur(gv)+'</strong>/'+esc(un)+'（'+t.gap_pct.toFixed(0)+'%）')+
       (h?'<span class="sec">'+eur(p.best.unit)+'/'+esc(u)+'・'+t.units+' '+esc(u)+'約 '+eur(t.equiv_pack)+'</span>':'')+'</p>'+
+      (t.reached&&t.conditions&&t.conditions.length?'<div class="bar-legend"><span>條件：'+esc(t.conditions.join("・"))+'</span></div>':'')+
       (t.reached?'':'<div class="bar" role="img" aria-label="目標價占目前價格的比例"><i style="width:'+fill.toFixed(1)+'%"></i></div>'+
       '<div class="bar-legend"><span>目標 '+eur(tv)+'/'+esc(un)+'</span><span>差 '+eur(gv)+'/'+esc(un)+'</span></div>')+
     '</section>');

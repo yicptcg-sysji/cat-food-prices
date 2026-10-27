@@ -1,9 +1,9 @@
 {
  "title": "幼貓濕食比價",
- "updated": "2026-10-25",
- "updated_zh": "2026年10月25日",
- "next_zh": "10月27日",
- "generated_zh": "2026-10-25 16:40",
+ "updated": "2026-10-27",
+ "updated_zh": "2026年10月27日",
+ "next_zh": "10月29日",
+ "generated_zh": "2026-10-27 09:44",
  "location": "鹿特丹",
  "products": [
   {
@@ -14,60 +14,60 @@
    "pack": "85g 餐包",
    "unit_word": "包",
    "image": "assets/products/rc_kitten_sterilised_gravy.webp",
-   "date": "2026-10-25",
+   "date": "2026-10-27",
    "best": {
-    "shop": "zooplus.nl",
-    "variant": "48x85g",
-    "units": 48,
+    "shop": "Medpets",
+    "variant": "12x85g",
+    "units": 12,
     "unit_g": 85,
-    "list_price": 74.49,
-    "price": 63.32,
-    "unit": 1.319,
-    "per100g": 1.552,
-    "basis": "定期配送價",
+    "list_price": 13.85,
+    "price": 13.0,
+    "unit": 1.083,
+    "per100g": 1.275,
+    "basis": "定期訂購價",
     "autoship": true,
-    "one_time_unit": 1.535,
-    "one_time_per100g": 1.806,
+    "one_time_unit": 1.116,
+    "one_time_per100g": 1.313,
     "conditions": [
-     "滿 €29 免運",
+     "滿 €69 免運・運費 €4.95・最低訂單 €14.95",
      "需訂閱定期配送"
     ],
-    "new_customer": {
-     "portal": "CashbackXL",
-     "rate_pct": 10.0,
-     "unit": 1.424,
-     "price": 68.33,
-     "per100g": 1.675
-    },
+    "new_customer": null,
     "in_stock": true,
     "verified": true,
     "status": "verified",
-    "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/royal_canin/kitten/1200123",
-    "detail": "定期配送價 €63.32"
+    "url": "https://www.medpets.nl/royal-canin-kitten-sterilised-gravy-maaltijdzakje",
+    "detail": "30% korting：€13.85（原 €19.75）；定期訂購 6% → €13.00；未見截止日；單買 1 盒 €13.85 未達最低訂單 €14.95，至少 2 盒；未滿 €69 另加運費 €4.95；CashbackXL 明示定期訂購無返現。庫存 77"
    },
    "one_time_best": {
-    "shop": "Petgamma",
+    "shop": "Medpets",
     "variant": "12x85g",
-    "unit": 1.402,
+    "unit": 1.116,
     "unit_g": 85,
-    "url": "https://www.petgamma.com/nl/p/12x-kitten-sterilised-gravy-kattenvoer-nat-85-gr",
-    "per100g": 1.649
+    "url": "https://www.medpets.nl/royal-canin-kitten-sterilised-gravy-maaltijdzakje",
+    "per100g": 1.313
    },
    "badge": {
-    "kind": "first",
-    "text": "首次紀錄"
+    "kind": "new_low",
+    "text": "新低價",
+    "prev": 1.552
    },
    "target": {
     "units": 12,
     "price_eur": 13.0,
     "unit": 1.083,
-    "reached": false,
-    "gap_unit": 0.236,
-    "gap_pct": 21.8,
-    "equiv_pack": 15.83,
+    "reached": true,
+    "gap_unit": 0.0,
+    "gap_pct": 0.0,
+    "equiv_pack": 13.0,
+    "below_pct": 0.0,
+    "conditions": [
+     "滿 €69 免運・運費 €4.95・最低訂單 €14.95",
+     "需訂閱定期配送"
+    ],
     "unit_g": 85.0,
     "per100g": 1.275,
-    "gap_per100g": 0.277
+    "gap_per100g": 0.0
    },
    "history": [
     {
@@ -75,9 +75,39 @@
      "unit": 1.319,
      "per100g": 1.552,
      "one_time_unit": 1.402
+    },
+    {
+     "date": "2026-10-27",
+     "unit": 1.083,
+     "per100g": 1.275,
+     "one_time_unit": 1.116
     }
    ],
    "offers": [
+    {
+     "shop": "Medpets",
+     "variant": "12x85g",
+     "units": 12,
+     "unit_g": 85,
+     "list_price": 13.85,
+     "price": 13.0,
+     "unit": 1.083,
+     "per100g": 1.275,
+     "basis": "定期訂購價",
+     "autoship": true,
+     "one_time_unit": 1.116,
+     "one_time_per100g": 1.313,
+     "conditions": [
+      "滿 €69 免運・運費 €4.95・最低訂單 €14.95",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.medpets.nl/royal-canin-kitten-sterilised-gravy-maaltijdzakje",
+     "detail": "30% korting：€13.85（原 €19.75）；定期訂購 6% → €13.00；未見截止日；單買 1 盒 €13.85 未達最低訂單 €14.95，至少 2 盒；未滿 €69 另加運費 €4.95；CashbackXL 明示定期訂購無返現。庫存 77"
+    },
     {
      "shop": "zooplus.nl",
      "variant": "48x85g",
@@ -92,7 +122,7 @@
      "one_time_unit": 1.535,
      "one_time_per100g": 1.806,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": {
@@ -122,7 +152,7 @@
      "one_time_unit": 1.545,
      "one_time_per100g": 1.818,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": {
@@ -152,7 +182,7 @@
      "one_time_unit": 1.548,
      "one_time_per100g": 1.821,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": {
@@ -166,7 +196,7 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/royal_canin/kitten/1200123",
-     "detail": "定期配送價 €15.97；新客 7% 折扣"
+     "detail": "定期配送價 €15.97；首單用 zooplusGemak 15%（新客）"
     },
     {
      "shop": "Bitiba",
@@ -182,7 +212,7 @@
      "one_time_unit": 1.452,
      "one_time_per100g": 1.708,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": null,
@@ -206,7 +236,7 @@
      "one_time_unit": 1.47,
      "one_time_per100g": 1.729,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": null,
@@ -254,7 +284,7 @@
      "one_time_unit": 1.499,
      "one_time_per100g": 1.764,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": null,
@@ -262,7 +292,7 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/royal_canin/kitten/1200128",
-     "detail": "定期配送 6% → €16.91"
+     "detail": "定期配送 → €16.91；滿 €100 單次購買 5%（不與定期合用）"
     },
     {
      "shop": "Brekz",
@@ -309,7 +339,30 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.petsplace.nl/royal-canin-kitten-sterilised-gravy-kitten-kattenvoer-9003579007129-pps",
-     "detail": "頁面顯示「3+1 gratis」但不確定是否仍有效（Folderz 記載 4/10–4/24）；建議售價 €22.69；若 3+1 有效：48 包 €59.85 = €1.247/包（未確認）"
+     "detail": "頁面顯示「Kies en mix 3 + 1 gratis」（買 4 盒 multipack 省 25%，未見截止日）；訂閱電子報 10%；建議售價 €22.69；3+1：48 包 €59.85 = €1.247/包（購物車折扣，未計入 best）"
+    },
+    {
+     "shop": "Brekz",
+     "variant": "24x85g",
+     "units": 24,
+     "unit_g": 85,
+     "list_price": 39.19,
+     "price": 39.19,
+     "unit": 1.633,
+     "per100g": 1.921,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €35 免運"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.brekz.nl/royal-canin-nat-kattenvoer/royal-canin-kitten-sterilised-in-gravy-natvoer-kat-85-g.html",
+     "detail": ""
     },
     {
      "shop": "Viata",
@@ -385,10 +438,10 @@
      "variant": "12x85g",
      "units": 12,
      "unit_g": 85,
-     "list_price": 15.94,
-     "price": 15.94,
-     "unit": 1.328,
-     "per100g": 1.563,
+     "list_price": 12.47,
+     "price": 12.47,
+     "unit": 1.039,
+     "per100g": 1.223,
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
@@ -401,31 +454,7 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.pharmapets.nl/royal-canin-kitten-sterilised-12x-85gr.html",
-     "detail": "特價 -15%（原價 €18.75）；搜尋摘要曾出現 €13.13（-30%），現已失效"
-    },
-    {
-     "shop": "Medpets",
-     "variant": "12x85g",
-     "units": 12,
-     "unit_g": 85,
-     "list_price": 19.75,
-     "price": 19.1,
-     "unit": 1.592,
-     "per100g": 1.873,
-     "basis": "含返現",
-     "autoship": false,
-     "one_time_unit": null,
-     "one_time_per100g": null,
-     "conditions": [
-      "運費 €4.95・最低訂單 €14.95",
-      "經 CashbackXL 返現 €0.65"
-     ],
-     "new_customer": null,
-     "in_stock": false,
-     "verified": true,
-     "status": "verified",
-     "url": "https://www.medpets.nl/royal-canin-kitten-sterilised-gravy-maaltijdzakje",
-     "detail": "定期訂購 6%"
+     "detail": "特價 -33%（原價 €18.75）；Niet op voorraad／Momenteel niet leverbaar（WebFetch）"
     },
     {
      "shop": "Amazon.nl",
@@ -455,7 +484,7 @@
      "verified": false,
      "status": "partly_verified",
      "url": "https://www.amazon.nl/s?k=royal+canin+kitten+sterilised+gravy",
-     "detail": "來自搜尋結果頁"
+     "detail": "來自搜尋結果頁（ASIN B0BY8P3G1P，4x12x85g）"
     },
     {
      "shop": "Amazon.nl",
@@ -485,17 +514,17 @@
      "verified": false,
      "status": "partly_verified",
      "url": "https://www.amazon.nl/s?k=royal+canin+kitten+sterilised+gravy",
-     "detail": "來自搜尋結果頁"
+     "detail": "來自搜尋結果頁（ASIN B084TNHTKB）"
     },
     {
      "shop": "bol.com (Petgamma)",
      "variant": "12x85g",
      "units": 12,
      "unit_g": 85,
-     "list_price": 25.7,
-     "price": 25.7,
-     "unit": 2.142,
-     "per100g": 2.52,
+     "list_price": 27.0,
+     "price": 27.0,
+     "unit": 2.25,
+     "per100g": 2.647,
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
@@ -506,13 +535,13 @@
      "new_customer": null,
      "in_stock": true,
      "verified": false,
-     "status": "partly_verified",
+     "status": "unverified",
      "url": "https://www.bol.com/nl/nl/p/royal-canin-kitten-sterilised-gravy-kitten-kattenvoer-12x85-g/9300000064660027/",
-     "detail": "規格選項標示混亂"
+     "detail": "頁面選中規格顯示「8.16 kg」€27,-（賣家 Petgamma），規格對不上，不採用"
     }
    ],
-   "main_count": 12,
-   "shop_count": 7,
+   "main_count": 14,
+   "shop_count": 8,
    "mixed_sizes": false
   },
   {
@@ -523,42 +552,43 @@
    "pack": "200g／400g 罐",
    "unit_word": "罐",
    "image": "assets/products/macs_kitten.webp",
-   "date": "2026-10-25",
+   "date": "2026-10-27",
    "best": {
     "shop": "Bitiba",
-    "variant": "6x400g Kitten 小牛＋雞心",
+    "variant": "6x800g Kitten 小牛＋雞心",
     "units": 6,
-    "unit_g": 400,
-    "list_price": 17.29,
-    "price": 16.25,
-    "unit": 2.708,
-    "per100g": 0.677,
+    "unit_g": 800,
+    "list_price": 28.99,
+    "price": 27.25,
+    "unit": 4.542,
+    "per100g": 0.568,
     "basis": "定期配送價",
     "autoship": true,
-    "one_time_unit": 2.882,
-    "one_time_per100g": 0.721,
+    "one_time_unit": 4.832,
+    "one_time_per100g": 0.604,
     "conditions": [
-     "滿 €29 免運",
+     "滿 €29 免運・運費 €2.99",
      "需訂閱定期配送"
     ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
     "status": "verified",
-    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
-    "detail": "定期 → €16.25；來自 Bitiba 商品列表"
+    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579522",
+    "detail": "定期 → €27.25（價格有效至 2026-11-03）；2026-10-27 首次追蹤 800g"
    },
    "one_time_best": {
-    "shop": "Bitiba",
-    "variant": "6x400g Kitten 小牛＋雞心",
-    "unit": 2.882,
-    "unit_g": 400,
-    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
-    "per100g": 0.721
+    "shop": "CutieCat",
+    "variant": "1x800g Kitten 小牛＋雞心",
+    "unit": 4.55,
+    "unit_g": 800,
+    "url": "https://cutiecat.nl/product/macs-kittenvoer-blikjes-800g/",
+    "per100g": 0.569
    },
    "badge": {
-    "kind": "first",
-    "text": "首次紀錄"
+    "kind": "new_low",
+    "text": "新低價",
+    "prev": 0.677
    },
    "target": null,
    "history": [
@@ -567,9 +597,62 @@
      "unit": 2.708,
      "per100g": 0.677,
      "one_time_unit": 1.693
+    },
+    {
+     "date": "2026-10-27",
+     "unit": 4.542,
+     "per100g": 0.568,
+     "one_time_unit": 1.693
     }
    ],
    "offers": [
+    {
+     "shop": "Bitiba",
+     "variant": "6x800g Kitten 小牛＋雞心",
+     "units": 6,
+     "unit_g": 800,
+     "list_price": 28.99,
+     "price": 27.25,
+     "unit": 4.542,
+     "per100g": 0.568,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 4.832,
+     "one_time_per100g": 0.604,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579522",
+     "detail": "定期 → €27.25（價格有效至 2026-11-03）；2026-10-27 首次追蹤 800g"
+    },
+    {
+     "shop": "CutieCat",
+     "variant": "1x800g Kitten 小牛＋雞心",
+     "units": 1,
+     "unit_g": 800,
+     "list_price": 4.55,
+     "price": 4.55,
+     "unit": 4.55,
+     "per100g": 0.569,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €45 免運・運費 €0"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://cutiecat.nl/product/macs-kittenvoer-blikjes-800g/",
+     "detail": "火雞＋兔 €4.58；火雞／牛／鴨 €4.61"
+    },
     {
      "shop": "Bitiba",
      "variant": "6x400g Kitten 小牛＋雞心",
@@ -584,38 +667,122 @@
      "one_time_unit": 2.882,
      "one_time_per100g": 0.721,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
      "status": "verified",
-     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
-     "detail": "定期 → €16.25；來自 Bitiba 商品列表"
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579518",
+     "detail": "定期 → €16.25（價格有效至 2026-11-03）"
     },
     {
      "shop": "Bitiba",
-     "variant": "6x400g Kitten",
+     "variant": "6x400g Kitten 火雞／牛／鴨",
      "units": 6,
      "unit_g": 400,
      "list_price": 18.19,
-     "price": 18.19,
-     "unit": 3.032,
-     "per100g": 0.758,
-     "basis": "單次購買",
-     "autoship": false,
-     "one_time_unit": null,
-     "one_time_per100g": null,
+     "price": 17.1,
+     "unit": 2.85,
+     "per100g": 0.713,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 3.032,
+     "one_time_per100g": 0.758,
      "conditions": [
-      "滿 €29 免運"
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
      ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
      "status": "verified",
-     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
-     "detail": "來自 Bitiba 商品列表"
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579518",
+     "detail": "定期 → €17.10"
+    },
+    {
+     "shop": "zooplus.nl",
+     "variant": "6x400g Kitten 小牛＋雞心",
+     "units": 6,
+     "unit_g": 400,
+     "list_price": 17.29,
+     "price": 17.1,
+     "unit": 2.85,
+     "per100g": 0.713,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.19"
+     ],
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 2.643,
+      "price": 15.86,
+      "per100g": 0.661
+     },
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/macs_s/mac_s_blikken/444159",
+     "detail": "頁面無定期折扣價"
+    },
+    {
+     "shop": "CutieCat",
+     "variant": "1x400g Kitten 小牛＋雞心",
+     "units": 1,
+     "unit_g": 400,
+     "list_price": 2.85,
+     "price": 2.85,
+     "unit": 2.85,
+     "per100g": 0.713,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €45 免運・運費 €0"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://cutiecat.nl/product/macs-kittenvoer-blikjes-400g/",
+     "detail": "火雞＋兔 €3.01；火雞／牛／鴨 €3.07"
+    },
+    {
+     "shop": "zooplus.nl",
+     "variant": "6x400g Kitten 火雞／牛／鴨",
+     "units": 6,
+     "unit_g": 400,
+     "list_price": 18.19,
+     "price": 17.99,
+     "unit": 2.998,
+     "per100g": 0.75,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.20"
+     ],
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 2.782,
+      "price": 16.69,
+      "per100g": 0.696
+     },
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/macs_s/mac_s_blikken/444159",
+     "detail": ""
     },
     {
      "shop": "Bitiba",
@@ -631,7 +798,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €29 免運"
+      "滿 €29 免運・運費 €2.99"
      ],
      "new_customer": null,
      "in_stock": true,
@@ -639,6 +806,30 @@
      "status": "verified",
      "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
      "detail": "購物車折扣價 €10.16（單次購買）；定期 €10.61"
+    },
+    {
+     "shop": "Bitiba",
+     "variant": "6x400g Kitten 火雞＋兔",
+     "units": 6,
+     "unit_g": 400,
+     "list_price": 22.49,
+     "price": 21.14,
+     "unit": 3.523,
+     "per100g": 0.881,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 3.748,
+     "one_time_per100g": 0.937,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579518",
+     "detail": "定期 → €21.14"
     },
     {
      "shop": "CutieCat",
@@ -654,7 +845,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €45 免運"
+      "滿 €45 免運・運費 €0"
      ],
      "new_customer": null,
      "in_stock": true,
@@ -662,6 +853,59 @@
      "status": "verified",
      "url": "https://cutiecat.nl/product/macs-kitten-natvoer-blikjes-200g/",
      "detail": "特價（原 €22.56）"
+    },
+    {
+     "shop": "CutieCat",
+     "variant": "12x200g Kitten 火雞／牛／鴨",
+     "units": 12,
+     "unit_g": 200,
+     "list_price": 21.49,
+     "price": 21.49,
+     "unit": 1.791,
+     "per100g": 0.895,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €45 免運・運費 €0"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://cutiecat.nl/product/macs-kitten-natvoer-blikjes-200g/",
+     "detail": "特價（原 €22.56）"
+    },
+    {
+     "shop": "zooplus.nl",
+     "variant": "6x400g Kitten 火雞＋兔",
+     "units": 6,
+     "unit_g": 400,
+     "list_price": 22.49,
+     "price": 22.24,
+     "unit": 3.707,
+     "per100g": 0.927,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.25"
+     ],
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 3.438,
+      "price": 20.63,
+      "per100g": 0.86
+     },
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/macs_s/mac_s_blikken/444159",
+     "detail": ""
     },
     {
      "shop": "zooplus.nl",
@@ -677,7 +921,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.12"
      ],
      "new_customer": {
@@ -691,7 +935,7 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/macs_s/mac_s_blikken/444155",
-     "detail": "新客 7%"
+     "detail": "首單用 zooplusGemak 15%（新客）"
     },
     {
      "shop": "CutieCat",
@@ -707,36 +951,114 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €45 免運"
+      "滿 €45 免運・運費 €0"
      ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
      "status": "verified",
      "url": "https://cutiecat.nl/product/macs-kitten-natvoer-blikjes-200g/",
-     "detail": ""
+     "detail": "火雞＋兔 €2.02"
     },
     {
      "shop": "Bitiba",
      "variant": "6x200g Kitten 火雞／牛／鴨",
      "units": 6,
      "unit_g": 200,
-     "list_price": 12.19,
-     "price": 12.19,
-     "unit": 2.032,
-     "per100g": 1.016,
-     "basis": "單次購買",
-     "autoship": false,
-     "one_time_unit": null,
-     "one_time_per100g": null,
+     "list_price": 12.29,
+     "price": 11.55,
+     "unit": 1.925,
+     "per100g": 0.963,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 2.048,
+     "one_time_per100g": 1.024,
      "conditions": [
-      "滿 €29 免運"
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
      ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
      "status": "verified",
      "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
+     "detail": "定期 → €11.55"
+    },
+    {
+     "shop": "CutieCat",
+     "variant": "12x200g Kitten 火雞＋兔",
+     "units": 12,
+     "unit_g": 200,
+     "list_price": 23.18,
+     "price": 23.18,
+     "unit": 1.932,
+     "per100g": 0.966,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €45 免運・運費 €0"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://cutiecat.nl/product/macs-kitten-natvoer-blikjes-200g/",
+     "detail": "特價（原 €24.24）"
+    },
+    {
+     "shop": "Bitiba",
+     "variant": "6x200g Kitten 火雞＋兔",
+     "units": 6,
+     "unit_g": 200,
+     "list_price": 12.49,
+     "price": 11.74,
+     "unit": 1.957,
+     "per100g": 0.978,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 2.082,
+     "one_time_per100g": 1.041,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
+     "detail": "定期 → €11.74"
+    },
+    {
+     "shop": "zooplus.nl",
+     "variant": "6x200g Kitten 火雞／牛／鴨",
+     "units": 6,
+     "unit_g": 200,
+     "list_price": 12.29,
+     "price": 12.15,
+     "unit": 2.025,
+     "per100g": 1.012,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.14"
+     ],
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 1.878,
+      "price": 11.27,
+      "per100g": 0.939
+     },
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/macs_s/mac_s_blikken/444155",
      "detail": ""
     },
     {
@@ -753,7 +1075,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.14"
      ],
      "new_customer": {
@@ -768,32 +1090,9 @@
      "status": "verified",
      "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/macs_s/mac_s_blikken/444155",
      "detail": ""
-    },
-    {
-     "shop": "Bitiba",
-     "variant": "6x200g Kitten 火雞＋兔",
-     "units": 6,
-     "unit_g": 200,
-     "list_price": 12.49,
-     "price": 12.49,
-     "unit": 2.082,
-     "per100g": 1.041,
-     "basis": "單次購買",
-     "autoship": false,
-     "one_time_unit": null,
-     "one_time_per100g": null,
-     "conditions": [
-      "滿 €29 免運"
-     ],
-     "new_customer": null,
-     "in_stock": true,
-     "verified": true,
-     "status": "verified",
-     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/macs/249562/579519?variantId=579519.6",
-     "detail": ""
     }
    ],
-   "main_count": 9,
+   "main_count": 19,
    "shop_count": 3,
    "mixed_sizes": true
   },
@@ -805,42 +1104,43 @@
    "pack": "200g 罐",
    "unit_word": "罐",
    "image": "assets/products/mjamjam_kitten.webp",
-   "date": "2026-10-25",
+   "date": "2026-10-27",
    "best": {
     "shop": "Bitiba",
-    "variant": "Mixpack 6x200g",
-    "units": 6,
+    "variant": "24x200g 小牛肉",
+    "units": 24,
     "unit_g": 200,
-    "list_price": 13.49,
-    "price": 12.68,
-    "unit": 2.113,
-    "per100g": 1.057,
+    "list_price": 48.39,
+    "price": 45.49,
+    "unit": 1.895,
+    "per100g": 0.948,
     "basis": "定期配送價",
     "autoship": true,
-    "one_time_unit": 2.248,
-    "one_time_per100g": 1.124,
+    "one_time_unit": 2.016,
+    "one_time_per100g": 1.008,
     "conditions": [
-     "滿 €29 免運",
+     "滿 €29 免運・運費 €2.99",
      "需訂閱定期配送"
     ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
     "status": "verified",
-    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750481",
-    "detail": "定期配送 → €12.68"
+    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
+    "detail": "定期配送 → €45.49（價格有效至 2026-11-03）"
    },
    "one_time_best": {
     "shop": "Bitiba",
-    "variant": "Mixpack 6x200g",
-    "unit": 2.248,
+    "variant": "24x200g 小牛肉",
+    "unit": 2.016,
     "unit_g": 200,
-    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750481",
-    "per100g": 1.124
+    "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
+    "per100g": 1.008
    },
    "badge": {
-    "kind": "first",
-    "text": "首次紀錄"
+    "kind": "new_low",
+    "text": "新低價",
+    "prev": 1.057
    },
    "target": null,
    "history": [
@@ -849,9 +1149,171 @@
      "unit": 2.113,
      "per100g": 1.057,
      "one_time_unit": 2.248
+    },
+    {
+     "date": "2026-10-27",
+     "unit": 1.895,
+     "per100g": 0.948,
+     "one_time_unit": 2.016
     }
    ],
    "offers": [
+    {
+     "shop": "Bitiba",
+     "variant": "24x200g 小牛肉",
+     "units": 24,
+     "unit_g": 200,
+     "list_price": 48.39,
+     "price": 45.49,
+     "unit": 1.895,
+     "per100g": 0.948,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 2.016,
+     "one_time_per100g": 1.008,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
+     "detail": "定期配送 → €45.49（價格有效至 2026-11-03）"
+    },
+    {
+     "shop": "Bitiba",
+     "variant": "24x200g 雞肉",
+     "units": 24,
+     "unit_g": 200,
+     "list_price": 49.89,
+     "price": 46.9,
+     "unit": 1.954,
+     "per100g": 0.977,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 2.079,
+     "one_time_per100g": 1.04,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
+     "detail": "定期配送 → €46.90"
+    },
+    {
+     "shop": "Bitiba",
+     "variant": "6x200g 小牛肉",
+     "units": 6,
+     "unit_g": 200,
+     "list_price": 12.49,
+     "price": 11.74,
+     "unit": 1.957,
+     "per100g": 0.978,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 2.082,
+     "one_time_per100g": 1.041,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
+     "detail": "定期配送 → €11.74"
+    },
+    {
+     "shop": "Bitiba",
+     "variant": "6x200g 雞肉",
+     "units": 6,
+     "unit_g": 200,
+     "list_price": 12.99,
+     "price": 12.21,
+     "unit": 2.035,
+     "per100g": 1.018,
+     "basis": "定期配送價",
+     "autoship": true,
+     "one_time_unit": 2.165,
+     "one_time_per100g": 1.083,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "需訂閱定期配送"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
+     "detail": "定期配送 → €12.21"
+    },
+    {
+     "shop": "zooplus.nl",
+     "variant": "24x200g 小牛肉",
+     "units": 24,
+     "unit_g": 200,
+     "list_price": 49.99,
+     "price": 49.44,
+     "unit": 2.06,
+     "per100g": 1.03,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.55"
+     ],
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 1.911,
+      "price": 45.86,
+      "per100g": 0.956
+     },
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1578995",
+     "detail": "原價 €51.96"
+    },
+    {
+     "shop": "zooplus.nl",
+     "variant": "24x200g 雞肉",
+     "units": 24,
+     "unit_g": 200,
+     "list_price": 49.99,
+     "price": 49.44,
+     "unit": 2.06,
+     "per100g": 1.03,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.55"
+     ],
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 1.911,
+      "price": 45.86,
+      "per100g": 0.956
+     },
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1578995",
+     "detail": "原價 €51.96"
+    },
     {
      "shop": "Bitiba",
      "variant": "Mixpack 6x200g",
@@ -866,7 +1328,7 @@
      "one_time_unit": 2.248,
      "one_time_per100g": 1.124,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
      "new_customer": null,
@@ -877,80 +1339,68 @@
      "detail": "定期配送 → €12.68"
     },
     {
-     "shop": "Bitiba",
-     "variant": "24x200g 小牛肉＋鮭魚油",
-     "units": 24,
-     "unit_g": 200,
-     "list_price": 55.19,
-     "price": 51.88,
-     "unit": 2.162,
-     "per100g": 1.081,
-     "basis": "定期配送價",
-     "autoship": true,
-     "one_time_unit": 2.3,
-     "one_time_per100g": 1.15,
-     "conditions": [
-      "滿 €29 免運",
-      "需訂閱定期配送"
-     ],
-     "new_customer": null,
-     "in_stock": true,
-     "verified": true,
-     "status": "verified",
-     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
-     "detail": "定期配送 → €51.88"
-    },
-    {
-     "shop": "Bitiba",
-     "variant": "6x200g 小牛肉＋鮭魚油",
+     "shop": "zooplus.nl",
+     "variant": "6x200g 小牛肉",
      "units": 6,
      "unit_g": 200,
-     "list_price": 14.19,
-     "price": 13.34,
-     "unit": 2.223,
-     "per100g": 1.112,
-     "basis": "定期配送價",
-     "autoship": true,
-     "one_time_unit": 2.365,
-     "one_time_per100g": 1.183,
+     "list_price": 12.99,
+     "price": 12.85,
+     "unit": 2.142,
+     "per100g": 1.071,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
-      "滿 €29 免運",
-      "需訂閱定期配送"
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.14"
      ],
-     "new_customer": null,
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 1.987,
+      "price": 11.92,
+      "per100g": 0.994
+     },
      "in_stock": true,
      "verified": true,
      "status": "verified",
-     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
-     "detail": "定期配送 → €13.34"
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1578995",
+     "detail": "首單用 zooplusGemak 15%（新客）；頁面無定期折扣價"
     },
     {
-     "shop": "Bitiba",
-     "variant": "24x200g 雞肉＋鮭魚油",
-     "units": 24,
+     "shop": "zooplus.nl",
+     "variant": "6x200g 雞肉",
+     "units": 6,
      "unit_g": 200,
-     "list_price": 57.19,
-     "price": 53.76,
-     "unit": 2.24,
-     "per100g": 1.12,
-     "basis": "定期配送價",
-     "autoship": true,
-     "one_time_unit": 2.383,
-     "one_time_per100g": 1.192,
+     "list_price": 12.99,
+     "price": 12.85,
+     "unit": 2.142,
+     "per100g": 1.071,
+     "basis": "含返現",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
      "conditions": [
-      "滿 €29 免運",
-      "需訂閱定期配送"
+      "滿 €29 免運・運費 €2.99",
+      "經 ShopBuddies 返現 €0.14"
      ],
-     "new_customer": null,
+     "new_customer": {
+      "portal": "CashbackXL",
+      "rate_pct": 10.0,
+      "unit": 1.987,
+      "price": 11.92,
+      "per100g": 0.994
+     },
      "in_stock": true,
      "verified": true,
      "status": "verified",
-     "url": "https://www.bitiba.nl/shop/katten/kattenvoer_blik/mjamjam/1750480",
-     "detail": "定期配送 → €53.76"
+     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1578995",
+     "detail": ""
     },
     {
      "shop": "CutieCat",
-     "variant": "1x200g（雞／小牛／火雞）",
+     "variant": "1x200g（4 種口味）",
      "units": 1,
      "unit_g": 200,
      "list_price": 2.25,
@@ -962,7 +1412,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €45 免運"
+      "滿 €45 免運・運費 €0"
      ],
      "new_customer": null,
      "in_stock": true,
@@ -976,90 +1426,30 @@
      "variant": "Mixpack 6x200g",
      "units": 6,
      "unit_g": 200,
-     "list_price": 14.29,
-     "price": 14.13,
-     "unit": 2.355,
-     "per100g": 1.177,
+     "list_price": 14.19,
+     "price": 14.03,
+     "unit": 2.338,
+     "per100g": 1.169,
      "basis": "含返現",
      "autoship": false,
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €29 免運",
+      "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.16"
      ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
-      "unit": 2.185,
-      "price": 13.11,
-      "per100g": 1.093
+      "unit": 2.17,
+      "price": 13.02,
+      "per100g": 1.085
      },
      "in_stock": true,
      "verified": true,
      "status": "verified",
      "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1579502",
      "detail": ""
-    },
-    {
-     "shop": "zooplus.nl",
-     "variant": "24x200g",
-     "units": 24,
-     "unit_g": 200,
-     "list_price": 57.49,
-     "price": 56.86,
-     "unit": 2.369,
-     "per100g": 1.185,
-     "basis": "含返現",
-     "autoship": false,
-     "one_time_unit": null,
-     "one_time_per100g": null,
-     "conditions": [
-      "滿 €29 免運",
-      "經 ShopBuddies 返現 €0.63"
-     ],
-     "new_customer": {
-      "portal": "CashbackXL",
-      "rate_pct": 10.0,
-      "unit": 2.198,
-      "price": 52.74,
-      "per100g": 1.099
-     },
-     "in_stock": true,
-     "verified": true,
-     "status": "verified",
-     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1578995",
-     "detail": "新客 7%"
-    },
-    {
-     "shop": "zooplus.nl",
-     "variant": "6x200g 小牛肉或雞肉",
-     "units": 6,
-     "unit_g": 200,
-     "list_price": 14.79,
-     "price": 14.63,
-     "unit": 2.438,
-     "per100g": 1.219,
-     "basis": "含返現",
-     "autoship": false,
-     "one_time_unit": null,
-     "one_time_per100g": null,
-     "conditions": [
-      "滿 €29 免運",
-      "經 ShopBuddies 返現 €0.16"
-     ],
-     "new_customer": {
-      "portal": "CashbackXL",
-      "rate_pct": 10.0,
-      "unit": 2.262,
-      "price": 13.57,
-      "per100g": 1.131
-     },
-     "in_stock": true,
-     "verified": true,
-     "status": "verified",
-     "url": "https://www.zooplus.nl/shop/katten/kattenvoer_blik/mjamjam_natvoer/1578995",
-     "detail": "新客 7%"
     },
     {
      "shop": "Zoolini",
@@ -1108,7 +1498,7 @@
      "detail": ""
     }
    ],
-   "main_count": 10,
+   "main_count": 13,
    "shop_count": 4,
    "mixed_sizes": false
   },
@@ -1120,7 +1510,7 @@
    "pack": "70g 罐",
    "unit_word": "罐",
    "image": "assets/products/farmina_nd_ocean_kitten.webp",
-   "date": "2026-10-25",
+   "date": "2026-10-27",
    "best": {
     "shop": "CutieCat",
     "variant": "24x70g",
@@ -1135,24 +1525,30 @@
     "one_time_unit": null,
     "one_time_per100g": null,
     "conditions": [
-     "滿 €45 免運"
+     "滿 €45 免運・運費 €0"
     ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
     "status": "verified",
     "url": "https://cutiecat.nl/product/farmina-nd-ocean-kitten-natvoer/",
-    "detail": "特價（原 €42.96）"
+    "detail": ""
    },
    "one_time_best": null,
    "badge": {
-    "kind": "first",
-    "text": "首次紀錄"
+    "kind": "at_low",
+    "text": "持平歷史低價"
    },
    "target": null,
    "history": [
     {
      "date": "2026-10-25",
+     "unit": 1.666,
+     "per100g": 2.38,
+     "one_time_unit": 1.666
+    },
+    {
+     "date": "2026-10-27",
      "unit": 1.666,
      "per100g": 2.38,
      "one_time_unit": 1.666
@@ -1173,14 +1569,14 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €45 免運"
+      "滿 €45 免運・運費 €0"
      ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
      "status": "verified",
      "url": "https://cutiecat.nl/product/farmina-nd-ocean-kitten-natvoer/",
-     "detail": "特價（原 €42.96）"
+     "detail": ""
     },
     {
      "shop": "CutieCat",
@@ -1196,7 +1592,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "滿 €45 免運"
+      "滿 €45 免運・運費 €0"
      ],
      "new_customer": null,
      "in_stock": true,
@@ -1226,7 +1622,7 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.zoomalia.nl/dierenwinkel/farmina-n-d-ocean-tonijn-kabeljauw-garnalen-pompoen-voor-kitten-p-145245.html",
-     "detail": "頁首顯示 €1.79 起；另有組合 ref 115791（€23.88）規格未確認"
+     "detail": "頁首顯示 €1.79 起；ref 115791 €23.88 規格未確認"
     },
     {
      "shop": "Catsclusive",
@@ -1249,7 +1645,30 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.catsclusive.nl/farmina-natvoer/nd-ocean-kitten-tonijn-kabeljauw-garnaal-pompoen-24-x-70-gram",
-     "detail": ""
+     "detail": "LD 標 PreOrder，頁面寫 Levertijd 1-3 werkdagen"
+    },
+    {
+     "shop": "Farmina 官方 eshop",
+     "variant": "24x70g",
+     "units": 24,
+     "unit_g": 70,
+     "list_price": 48.0,
+     "price": 48.0,
+     "unit": 2.0,
+     "per100g": 2.857,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "運費未知"
+     ],
+     "new_customer": null,
+     "in_stock": true,
+     "verified": true,
+     "status": "verified",
+     "url": "https://www.farmina.com/nl/eshop/kattenvoeding/n&d-ocean-/698-tonijn,-kabeljauw,-garnaal-&-pompoen-kitten-natvoer.html",
+     "detail": "頁面顯示 24x70g €48.00（€28.57/kg）"
     },
     {
      "shop": "Medpets",
@@ -1265,7 +1684,7 @@
      "one_time_unit": null,
      "one_time_per100g": null,
      "conditions": [
-      "運費 €4.95・最低訂單 €14.95",
+      "滿 €69 免運・運費 €4.95・最低訂單 €14.95",
       "經 CashbackXL 返現 €1.75"
      ],
      "new_customer": null,
@@ -1273,17 +1692,40 @@
      "verified": true,
      "status": "verified",
      "url": "https://www.medpets.nl/farmina-n-d-ocean-kitten-natvoer?sku=MP44798",
-     "detail": "定期訂購；包裝數由 €31.43/kg 推算"
+     "detail": "定期訂購 6%"
+    },
+    {
+     "shop": "CutieCat",
+     "variant": "24x70g Prime Kitten 雞＋石榴",
+     "units": 24,
+     "unit_g": 70,
+     "list_price": 39.6,
+     "price": 39.6,
+     "unit": 1.65,
+     "per100g": 2.357,
+     "basis": "單次購買",
+     "autoship": false,
+     "one_time_unit": null,
+     "one_time_per100g": null,
+     "conditions": [
+      "滿 €45 免運・運費 €0"
+     ],
+     "new_customer": null,
+     "in_stock": false,
+     "verified": true,
+     "status": "verified",
+     "url": "https://cutiecat.nl/product/farmina-nd-prime-kitten-natvoer-70g/",
+     "detail": "原 €40.56；Niet op voorraad；2026-10-27 新增追蹤（其他 Kitten 口味）"
     },
     {
      "shop": "Farmina 官方 eshop",
-     "variant": "1x70g",
-     "units": 1,
+     "variant": "24x70g Prime Kitten 雞＋石榴",
+     "units": 24,
      "unit_g": 70,
-     "list_price": 2.0,
-     "price": 2.0,
-     "unit": 2.0,
-     "per100g": 2.857,
+     "list_price": 52.8,
+     "price": 52.8,
+     "unit": 2.2,
+     "per100g": 3.143,
      "basis": "單次購買",
      "autoship": false,
      "one_time_unit": null,
@@ -1295,57 +1737,58 @@
      "in_stock": true,
      "verified": false,
      "status": "partly_verified",
-     "url": "https://www.farmina.com/nl/eshop/kattenvoeding/n&d-ocean-/698-tonijn,-kabeljauw,-garnaal-&-pompoen-kitten-natvoer.html",
-     "detail": "頁面只顯示 €28.57/kg，單價為換算值"
+     "url": "https://www.farmina.com/nl/eshop/kattenvoeding/n&d-prime/498-kip-&-granaatappel-kitten-natvoer.html",
+     "detail": "頁面只見 €31.43/kg；24x70g 價格為換算值"
     }
    ],
-   "main_count": 5,
-   "shop_count": 4,
+   "main_count": 6,
+   "shop_count": 5,
    "mixed_sizes": false
   }
  ],
  "promos": [
   {
    "shop": "zooplus.nl",
-   "text": "新客 7% 折扣；免運 €29 起"
+   "text": "首單用 zooplusGemak15% 折扣，之後定期至少 5%；首頁提及 Black Friday 但無具體內容；免運 €29 起"
   },
   {
    "shop": "Bitiba",
-   "text": "定期配送 6%；部分商品購物車自動折扣；免運 €29 起"
+   "text": "單次購買滿 €100 享 5%；定期配送約 6%；免運 €29 起"
   },
   {
    "shop": "Petgamma",
    "text": "Herhaalgemak 定期 5%；免運 €50 起"
   },
   {
+   "shop": "Medpets",
+   "text": "RC Kitten Sterilised 12x85g 30% 折扣；定期訂購 6%；免運 €69 起，否則 €4.95；最低訂單 €14.95；橫幅碼 HONDENJAS 5% 只限狗外套"
+  },
+  {
    "shop": "CutieCat",
-   "text": "多款特價；免運 €45 起"
+   "text": "免運 €45 起；多款特價"
   }
  ],
  "details": {
   "promos_other": [
    {
     "shop": "Pets Place",
-    "text": "免運 €39 起；RC 頁面顯示 3+1 免費（可能已過期）",
-    "status": "partly_verified"
-   },
-   {
-    "shop": "Medpets",
-    "text": "定期訂購 6%；優惠碼網站稱 15%（未核實）",
+    "text": "RC 頁面顯示「Kies en mix 3 + 1 gratis」；訂閱電子報 10%；免運 €39 起",
     "status": "partly_verified"
    },
    {
     "shop": "Zoomalia",
-    "text": "優惠碼網站稱 15%（未核實）；當日限時特價",
+    "text": "未重查",
     "status": "unverified"
    }
   ],
   "unverified": [
-   "supersales.nl €12.90（頁面 404）",
-   "Vivapets €18.00（頁面 404）",
-   "De Kattensite €18.69（聯盟導購）",
-   "Pharmapets €13.13（舊搜尋摘要）",
-   "Pflanzen-Kölle MAC's €1.55（可能只寄德國）"
+   "supersales.nl（10/25 頁面 404，10/27 未重查）",
+   "Vivapets（10/25 頁面 404）",
+   "De Kattensite（聯盟導購站，導向 zooplus 1578995；10/27 顯示 €12.99）",
+   "Pharmapets RC €12.47（10/27 缺貨）",
+   "Pflanzen-Kölle MAC's €1.55（可能只寄德國）",
+   "Tom&Co（比利時站 €20.09，是否寄荷蘭未確認）",
+   "agriking.nl MjAMjAM 200g €2.28（德國價、缺貨）"
   ],
   "assumptions": "以既有客戶費率計算；返現多以未稅、不含運費的訂單金額計；定期配送／購物車折扣／Herhaalgemak 與返現不疊加（各平台未明示可疊加；Medpets 明示定期訂購無返現）"
  }

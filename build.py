@@ -20,11 +20,12 @@ TZ = ZoneInfo("Europe/Amsterdam")
 BASIS_LABEL = {
     "autoship": "定期配送價",
     "herhaalgemak": "定期配送價",
+    "herhaal": "定期訂購價",
     "cart discount (abd)": "購物車折扣",
     "cashback": "含返現",
     "list price": "單次購買",
 }
-AUTOSHIP_BASES = {"autoship", "herhaalgemak"}
+AUTOSHIP_BASES = {"autoship", "herhaalgemak", "herhaal"}
 
 
 def num(v):
@@ -39,7 +40,9 @@ def strip_paren(s):
 
 
 def basis_key(b):
-    return (b or "").strip().lower()
+    k = (b or "").strip().lower()
+    # 「Herhaal（定期訂購 6%）」等括號變體 → 視為 herhaal（Medpets 定期訂購）
+    return "herhaal" if k.startswith("herhaal") and k != "herhaalgemak" else k
 
 
 def basis_label(b):
@@ -240,17 +243,22 @@ def build(src: Path):
         if meta.get("target") and best:
             t = meta["target"]
             tu = t["price_eur"] / t["units"]
-            gap = best["unit"] - tu
+            # 價格資料四捨五入到小數 3 位，改以「整盒價格」比較（容許 0.5 分誤差），避免剛好達標卻被判未達標
+            equiv = round(best["unit"] * t["units"], 2)
+            reached = equiv <= t["price_eur"] + 0.005
+            gap = 0.0 if reached else best["unit"] - tu
             target = {"units": t["units"], "price_eur": t["price_eur"], "unit": round(tu, 3),
-                      "reached": gap <= 1e-9, "gap_unit": round(gap, 3),
-                      "gap_pct": round(gap / tu * 100, 1),
-                      "equiv_pack": round(best["unit"] * t["units"], 2)}
+                      "reached": reached, "gap_unit": round(max(gap, 0.0), 3),
+                      "gap_pct": round(max(gap, 0.0) / tu * 100, 1),
+                      "equiv_pack": equiv,
+                      "below_pct": round(max(tu - best["unit"], 0.0) / tu * 100, 1) if reached else 0.0,
+                      "conditions": best["conditions"] if reached else []}
             ug = num(best.get("unit_g"))
             if ug and best["per100g"] is not None:
                 t100 = tu / ug * 100
-                g100 = best["per100g"] - t100
-                target.update({"unit_g": ug, "per100g": round(t100, 3), "gap_per100g": round(g100, 3),
-                               "reached": g100 <= 1e-9, "gap_pct": round(g100 / t100 * 100, 1)})
+                g100 = 0.0 if reached else best["per100g"] - t100
+                target.update({"unit_g": ug, "per100g": round(t100, 3), "gap_per100g": round(max(g100, 0.0), 3),
+                               "gap_pct": round(max(g100, 0.0) / t100 * 100, 1)})
 
         img = meta.get("image")
         img_out = None
