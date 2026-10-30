@@ -2,7 +2,14 @@
   "source_dir": "/cursor/stores/store-07c67034-b23d-4a5a-9f26-e791b261bad1/cat-wetfood",
   "site_title": "幼貓濕食比價",
   "update_interval_days": 2,
-  "product_order": ["rc_kitten_sterilised_gravy", "macs_kitten", "mjamjam_kitten", "farmina_nd_ocean_kitten"],
+  "product_order": [
+    "rc_kitten_sterilised_gravy",
+    "macs_kitten",
+    "mjamjam_kitten",
+    "farmina_nd_ocean_kitten",
+    "tigerino_tofu_sensitive",
+    "l_mesitran_vet_soft"
+  ],
   "products": {
     "rc_kitten_sterilised_gravy": {
       "brand": "Royal Canin",
@@ -11,13 +18,16 @@
       "pack": "85g 餐包",
       "unit_word": "包",
       "image": "assets/products/rc_kitten_sterilised_gravy.webp",
-      "target": {"units": 12, "price_eur": 13.0}
+      "target": {
+        "units": 12,
+        "price_eur": 13.0
+      }
     },
     "mjamjam_kitten": {
       "brand": "MjAMjAM",
       "name": "Kitten",
       "desc": "幼貓主食罐",
-      "pack": "200g 罐",
+      "pack": "125g／200g／400g／800g",
       "unit_word": "罐",
       "image": "assets/products/mjamjam_kitten.webp"
     },
@@ -25,17 +35,35 @@
       "brand": "MAC's",
       "name": "Kitten",
       "desc": "幼貓主食罐",
-      "pack": "200g／400g 罐",
+      "pack": "200g／400g／800g 罐",
       "unit_word": "罐",
       "image": "assets/products/macs_kitten.webp"
     },
     "farmina_nd_ocean_kitten": {
       "brand": "Farmina N&D",
-      "name": "Ocean Kitten",
-      "desc": "鮪魚・鱈魚・蝦・南瓜",
+      "name": "Kitten（Ocean／Prime）",
+      "desc": "海洋魚蝦／雞肉石榴",
       "pack": "70g 罐",
       "unit_word": "罐",
       "image": "assets/products/farmina_nd_ocean_kitten.webp"
+    },
+    "tigerino_tofu_sensitive": {
+      "brand": "Tigerino",
+      "name": "植物豆腐砂 Sensitive（無香）",
+      "desc": "豆腐貓砂・可沖馬桶・無香",
+      "pack": "11L 袋",
+      "unit_word": "袋",
+      "group": "other",
+      "image": "assets/products/tigerino_tofu_sensitive.webp"
+    },
+    "l_mesitran_vet_soft": {
+      "brand": "L-Mesitran",
+      "name": "Vet Soft 蜂蜜傷口凝膠",
+      "desc": "動物用醫療級蜂蜜凝膠（非 Ointment 軟膏）",
+      "pack": "1g／20g／60g／250g 條",
+      "unit_word": "條",
+      "group": "other",
+      "image": "assets/products/l_mesitran_vet_soft.webp"
     }
   }
 }

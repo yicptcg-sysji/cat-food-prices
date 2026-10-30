@@ -6,6 +6,13 @@
   function eur(v,d){return v==null?"—":"€"+Number(v).toFixed(d==null?2:d);}
   function variant(v){return esc(String(v||"").replace(/(\d)\s*x\s*(\d)/gi,"$1×$2"));}
   function p100(v){return v==null?"—":'<b class="p100 num">'+eur(v)+'<span class="u100">/100g</span></b>';}
+  function pB(p,v){return v==null?"—":'<b class="p100 num">'+eur(v,bd(p))+'<span class="u100">/'+bu(p)+'</span></b>';}
+  // 比價單位：濕食每 100g；其他商品每 g（3 位小數）或每公升
+  var BASE_LBL={"100g":"100g","g":"g","L":"L"}, BASE_ZH={"100g":"每 100g ","g":"每克","L":"每公升"};
+  function bu(p){return BASE_LBL[p.base]||"100g";}
+  function bz(p){return BASE_ZH[p.base]||"每 100g ";}
+  function bd(p){return p.base==="g"?3:2;}
+  function pbv(o){return o.pb!=null?o.pb:o.per100g;}
   function shortDate(iso){var p=iso.split("-");return (+p[1])+"/"+(+p[2]);}
   var ARROW='<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.2 5.3a1 1 0 0 1 1.4 0l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 1 1-1.4-1.4l4.3-4.3H4a1 1 0 1 1 0-2h13.5l-4.3-4.3a1 1 0 0 1 0-1.4z"/></svg>';
   var CHEV='<svg class="chev" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.3 9.3a1 1 0 0 1 1.4 0L12 13.6l4.3-4.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 0-1.4z"/></svg>';
@@ -35,9 +42,16 @@
   });
   html.push('</div></section>');
 
-  html.push('<h2 class="section-title">各商品目前最低價</h2><div class="empty-focus" id="empty-focus" hidden><span aria-hidden="true">🐾</span><p>目前沒有選擇任何商品。<br>點上方的商品名稱來挑選，或</p><button type="button" class="focus-all solid" data-all>全部顯示</button></div><div class="grid">');
-  D.products.forEach(function(p,i){ html.push(card(p,i)); });
+  var FOOD=D.products.filter(function(p){return p.group!=="other";});
+  var OTHER=D.products.filter(function(p){return p.group==="other";});
+  html.push('<h2 class="section-title" data-group="food">幼貓濕食目前最低價</h2><div class="empty-focus" id="empty-focus" hidden><span aria-hidden="true">🐾</span><p>目前沒有選擇任何商品。<br>點上方的商品名稱來挑選，或</p><button type="button" class="focus-all solid" data-all>全部顯示</button></div><div class="grid">');
+  FOOD.forEach(function(p,i){ html.push(card(p,i)); });
   html.push('</div>');
+  if(OTHER.length){
+    html.push('<h2 class="section-title" data-group="other">其他貓咪用品</h2><div class="grid">');
+    OTHER.forEach(function(p,i){ html.push(card(p,FOOD.length+i)); });
+    html.push('</div>');
+  }
 
   if(D.promos.length){
     html.push('<h2 class="section-title">全站優惠</h2><div class="promos">');
@@ -61,6 +75,11 @@
     $("#focus-count").textContent = shown===IDS.length ? "" : "顯示 "+shown+"／"+IDS.length;
     $("#focus-all").hidden = shown===IDS.length;
     $("#empty-focus").hidden = shown>0;
+    // 該分類的商品全部被隱藏時，連同分類標題一起隱藏
+    document.querySelectorAll(".section-title[data-group]").forEach(function(t){
+      var g=t.getAttribute("data-group"), any=D.products.some(function(p){return (p.group==="other"?"other":"food")===g && hidden.indexOf(p.id)<0;});
+      t.hidden=!any && shown>0;
+    });
   }
   document.querySelectorAll(".chip").forEach(function(c){
     c.addEventListener("click",function(){
@@ -100,20 +119,20 @@
     if(!b){
       s += '<div class="where">目前沒有已核實、有庫存的報價。</div></div>';
     } else {
-      s += '<div class="deal"><div class="price">'+(b.per100g!=null
-        ? '<div class="lbl">每 100g 最低價</div><div class="val num">'+eur(b.per100g)+'<small>/100g</small></div><div class="per num">'+eur(b.unit)+'/'+esc(u)+'（'+esc(b.unit_g)+'g）</div>'
+      s += '<div class="deal"><div class="price">'+(pbv(b)!=null
+        ? '<div class="lbl">'+bz(p)+'最低價</div><div class="val num">'+eur(pbv(b),bd(p))+'<small>/'+bu(p)+'</small></div><div class="per num">'+eur(b.unit)+'/'+esc(u)+(b.size?'（'+esc(b.size)+'）':'')+'</div>'
         : '<div class="lbl">最低每'+esc(u)+'</div><div class="val num">'+eur(b.unit)+'<small>/'+esc(u)+'</small></div>')+'</div>';
       s += '<a class="buy" href="'+esc(b.url)+'" target="_blank" rel="noopener nofollow">前往 '+esc(b.shop)+' '+ARROW+'</a></div>';
       s += '<div class="where"><b>'+esc(b.shop)+'</b>・'+variant(b.variant)+'・'+esc(b.basis)+' <span class="num">'+eur(b.price)+'</span><span class="cond">'+esc(b.conditions.join("・"))+'</span></div>';
       if(p.one_time_best){
         var o=p.one_time_best;
-        s += '<div class="alt">不想訂閱？單次購買最低：<a href="'+esc(o.url)+'" target="_blank" rel="noopener nofollow">'+esc(o.shop)+'</a> '+variant(o.variant)+' '+(o.per100g!=null?p100(o.per100g):'<span class="num">'+eur(o.unit)+'</span>/'+esc(u))+'</div>';
+        s += '<div class="alt">不想訂閱？單次購買最低：<a href="'+esc(o.url)+'" target="_blank" rel="noopener nofollow">'+esc(o.shop)+'</a> '+variant(o.variant)+' '+(pbv(o)!=null?pB(p,pbv(o)):'<span class="num">'+eur(o.unit)+'</span>/'+esc(u))+'</div>';
       }
       s += '</div>';
     }
     var others = p.offers.filter(function(o){return !(o.in_stock&&o.verified);}).length;
     s += '<button class="toggle" type="button" aria-expanded="false">比較 '+p.shop_count+' 家商店與價格走勢'+CHEV+'</button>';
-    s += '<div class="drill">'+chart(p)+'<h4>商店排名（依每 100g 最低價）</h4><ol class="offers">';
+    s += '<div class="drill">'+chart(p)+'<h4>商店排名（依'+bz(p)+'最低價）</h4><ol class="offers">';
     var groups=[], byShop={};
     p.offers.forEach(function(o){
       var main=o.in_stock&&o.verified;
@@ -127,12 +146,13 @@
       var o=g.items[0], main=g.main;
       if(main) rank++;
       var tags = o.conditions.map(function(c){return '<span class="tag">'+esc(c)+'</span>';}).join("");
-      if(o.new_customer) tags += '<span class="tag nc">新客首單 '+(o.new_customer.per100g!=null?eur(o.new_customer.per100g)+'/100g':eur(o.new_customer.unit)+'/'+esc(u))+'</span>';
-      if(o.one_time_unit) tags += '<span class="tag">單次 '+(o.one_time_per100g!=null?eur(o.one_time_per100g)+'/100g':eur(o.one_time_unit)+'/'+esc(u))+'</span>';
+      if(o.new_customer) tags += '<span class="tag nc">新客首單 '+(pbv(o.new_customer)!=null?eur(pbv(o.new_customer),bd(p))+'/'+bu(p):eur(o.new_customer.unit)+'/'+esc(u))+'</span>';
+      var otp=o.one_time_pb!=null?o.one_time_pb:o.one_time_per100g;
+      if(o.one_time_unit) tags += '<span class="tag">單次 '+(otp!=null?eur(otp,bd(p))+'/'+bu(p):eur(o.one_time_unit)+'/'+esc(u))+'</span>';
       var st = !o.in_stock ? "缺貨" : (o.status==="partly_verified" ? "部分核實" : (o.verified ? "" : "未核實"));
-      var rest = g.items.slice(1).map(function(x){return variant(x.variant)+' '+(x.per100g!=null?'<b class="num">'+eur(x.per100g)+'</b>/100g':eur(x.unit)+'/'+esc(u));}).join("、");
-      var bigv = o.per100g!=null ? eur(o.per100g)+'<span class="h">/100g</span>' : eur(o.unit)+'<span class="h">/'+esc(u)+'</span>';
-      var smallv = o.per100g!=null ? eur(o.unit)+'/'+esc(u)+'（'+esc(o.unit_g)+'g）' : '';
+      var rest = g.items.slice(1).map(function(x){return variant(x.variant)+' '+(pbv(x)!=null?'<b class="num">'+eur(pbv(x),bd(p))+'</b>/'+bu(p):eur(x.unit)+'/'+esc(u));}).join("、");
+      var bigv = pbv(o)!=null ? eur(pbv(o),bd(p))+'<span class="h">/'+bu(p)+'</span>' : eur(o.unit)+'<span class="h">/'+esc(u)+'</span>';
+      var smallv = pbv(o)!=null ? eur(o.unit)+'/'+esc(u)+(o.size?'（'+esc(o.size)+'）':'') : '';
       s += '<li class="offer'+(main?'':' dim')+(main&&rank===1?' top':'')+'"'+(main?'':' hidden')+'>'+
         '<span class="rank">'+(main?rank:'–')+'</span>'+
         '<div class="o-name"><div class="s">'+esc(o.shop)+(st?' <span class="st">'+st+'</span>':'')+'</div>'+
@@ -149,13 +169,13 @@
   }
 
   function chart(p){
-    var u=p.unit_word, use100=p.history.every(function(x){return x.per100g!=null;});
-    var h=p.history.map(function(x){return {date:x.date, v:use100?x.per100g:x.unit};});
-    var un=use100?'100g':u;
-    var s='<div class="chart"><h4>每 '+esc(un)+' 最低價走勢</h4>';
+    var u=p.unit_word, use100=p.history.every(function(x){return pbv(x)!=null;});
+    var h=p.history.map(function(x){return {date:x.date, v:use100?pbv(x):x.unit};});
+    var un=use100?bu(p):u, dd=use100?bd(p):2;
+    var s='<div class="chart"><h4>'+(use100?bz(p):'每'+esc(un))+'最低價走勢</h4>';
     if(h.length<2){
       var last=h[h.length-1];
-      s+='<div class="empty">目前只有 '+(last?shortDate(last.date)+' 一天':'')+'的資料'+(last?'（<b class="num">'+eur(last.v)+'</b>/'+esc(un)+'）':'')+'，累積更多天數後會顯示價格走勢。</div></div>';
+      s+='<div class="empty">目前只有 '+(last?shortDate(last.date)+' 一天':'')+'的資料'+(last?'（<b class="num">'+eur(last.v,dd)+'</b>/'+esc(un)+'）':'')+'，累積更多天數後會顯示價格走勢。</div></div>';
       return s;
     }
     var W=340,H=130,L=40,R=10,T=12,B=22;
@@ -168,10 +188,10 @@
     var g='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="價格走勢圖">';
     [mn+pad, (mn+mx)/2, mx-pad].forEach(function(v){
       g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v).toFixed(1)+'" y2="'+y(v).toFixed(1)+'" stroke="#efe7df"/>';
-      g+='<text x="'+(L-6)+'" y="'+(y(v)+4).toFixed(1)+'" font-size="10" text-anchor="end" fill="#8a807a">€'+v.toFixed(2)+'</text>';
+      g+='<text x="'+(L-6)+'" y="'+(y(v)+4).toFixed(1)+'" font-size="10" text-anchor="end" fill="#8a807a">€'+v.toFixed(dd)+'</text>';
     });
     g+='<polyline fill="none" stroke="#e8573a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="'+pts.join(" ")+'"/>';
-    h.forEach(function(d,i){ g+='<circle cx="'+x(i).toFixed(1)+'" cy="'+y(d.v).toFixed(1)+'" r="3.5" fill="#fff" stroke="#e8573a" stroke-width="2"><title>'+d.date+'：€'+d.v.toFixed(2)+'/'+un+'</title></circle>'; });
+    h.forEach(function(d,i){ g+='<circle cx="'+x(i).toFixed(1)+'" cy="'+y(d.v).toFixed(1)+'" r="3.5" fill="#fff" stroke="#e8573a" stroke-width="2"><title>'+d.date+'：€'+d.v.toFixed(dd)+'/'+un+'</title></circle>'; });
     var step=Math.max(1,Math.ceil(h.length/6));
     h.forEach(function(d,i){ if(i%step===0||i===h.length-1) g+='<text x="'+x(i).toFixed(1)+'" y="'+(H-6)+'" font-size="10" text-anchor="middle" fill="#8a807a">'+shortDate(d.date)+'</text>'; });
     g+='</svg>';

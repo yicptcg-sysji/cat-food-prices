@@ -25,7 +25,9 @@ BASIS_LABEL = {
     "cashback": "含返現",
     "list price": "單次購買",
 }
-AUTOSHIP_BASES = {"autoship", "herhaalgemak", "herhaal"}
+AUTOSHIP_BASES = {"autoship", "herhaalgemak", "herhaal", "subscription"}
+# 比價單位：濕食＝每 100g；其他商品依 prices.json 的 products.<id>.unit_basis（g＝每克、L＝每公升）
+BASE_FACTOR = {"100g": 100.0, "g": 1.0, "L": 1.0}
 
 
 def num(v):
@@ -42,11 +44,22 @@ def strip_paren(s):
 def basis_key(b):
     k = (b or "").strip().lower()
     # 「Herhaal（定期訂購 6%）」等括號變體 → 視為 herhaal（Medpets 定期訂購）
-    return "herhaal" if k.startswith("herhaal") and k != "herhaalgemak" else k
+    if k.startswith("herhaal") and k != "herhaalgemak":
+        return "herhaal"
+    # 「autoship（zooplusGemak 首單 15%）」→ autoship；「訂閱首單 -10%（…）」→ 訂閱（需定期配送）
+    if k.startswith("autoship"):
+        return "autoship"
+    if k.startswith("訂閱"):
+        return "subscription"
+    return k
 
 
 def basis_label(b):
     k = basis_key(b)
+    if k == "autoship" and "首單" in (b or ""):
+        return "定期配送首單價"
+    if k == "subscription":
+        return strip_paren(b) or "訂閱價"
     if k in BASIS_LABEL:
         return BASIS_LABEL[k]
     if k.startswith("含運費"):
@@ -62,7 +75,7 @@ def clean_shipping(s):
         parts.append(f"滿 €{m.group(1)} 免運")
     for m in re.finditer(r"(取貨點|宅配)免運\s*€\s*([\d.,]+)", s):
         parts.append(f"{m.group(1)}滿 €{m.group(2)} 免運")
-    m = re.search(r"(?<!免)運費\s*€\s*([\d.,]+)", s)
+    m = re.search(r"(?<!免)運費\s*€\s*([\d.,]+(?:[–-][\d.,]+)?)", s)
     if m:
         parts.append(f"運費 €{m.group(1)}")
     m = re.search(r"最低訂單\s*€\s*([\d.,]+)", s)
@@ -114,8 +127,30 @@ def is_main(o):
     return o.get("stock") == "in_stock" and o.get("status") == "verified"
 
 
-def offer_view(o, unit_word):
+def unit_size(o, base):
+    """每份的份量（g 或 L），用來換算比價單位。"""
+    return num(o.get("unit_l")) if base == "L" else num(o.get("unit_g"))
+
+
+def size_label(o, base):
+    v = unit_size(o, base)
+    if v is None:
+        return ""
+    return f"{v:g}L" if base == "L" else f"{v:g}g"
+
+
+def per_base(unit_price, o, base):
+    sz = unit_size(o, base)
+    if unit_price is None or not sz:
+        return None
+    return round(unit_price / sz * BASE_FACTOR[base], 4)
+
+
+def offer_view(o, unit_word, base="100g"):
     u, h, p, b = eff_unit_price(o)
+    if base != "100g":
+        h = None  # 非濕食不顯示每 100g
+    pb = h if base == "100g" else per_base(u, o, base)
     k = basis_key(b)
     conds = []
     conds.append(clean_shipping(o.get("shipping")))
@@ -139,6 +174,10 @@ def offer_view(o, unit_word):
     if new_cust:
         new_cust["per100g"] = per100(new_cust["unit"])
     ot_show = ot if (ot is not None and u is not None and ot > u + 1e-9) else None
+    if new_cust:
+        new_cust["pb"] = new_cust["per100g"] if base == "100g" else per_base(new_cust["unit"], o, base)
+        if base != "100g":
+            new_cust["per100g"] = None
     return {
         "shop": o.get("shop"),
         "variant": o.get("variant"),
@@ -148,10 +187,13 @@ def offer_view(o, unit_word):
         "price": p,
         "unit": u,
         "per100g": h,
+        "pb": pb,
+        "size": size_label(o, base),
         "basis": basis_label(b),
         "autoship": k in AUTOSHIP_BASES,
         "one_time_unit": ot_show,
-        "one_time_per100g": per100(ot_show),
+        "one_time_per100g": per100(ot_show) if base == "100g" else None,
+        "one_time_pb": (per100(ot_show) if base == "100g" else per_base(ot_show, o, base)),
         "conditions": [c for c in conds if c],
         "new_customer": new_cust,
         "in_stock": o.get("stock") == "in_stock",
@@ -188,14 +230,17 @@ def build(src: Path):
         meta = cfg.get("products", {}).get(pid, {})
         pdata = data.get("products", {}).get(pid, {})
         unit_word = meta.get("unit_word", "份")
+        base = pdata.get("unit_basis") or "100g"
+        if base not in BASE_FACTOR:
+            base = "100g"
         pobs = [o for o in obs if o["product"] == pid]
         if not pobs:
             continue
         pdates = sorted({o["date"] for o in pobs})
         cur_date = pdates[-1]
-        cur = [offer_view(o, unit_word) for o in pobs if o["date"] == cur_date]
+        cur = [offer_view(o, unit_word, base) for o in pobs if o["date"] == cur_date]
         cur = [c for c in cur if c["unit"] is not None]
-        cur.sort(key=lambda c: (not (c["in_stock"] and c["verified"]), c["per100g"] if c["per100g"] is not None else 9e9))
+        cur.sort(key=lambda c: (not (c["in_stock"] and c["verified"]), c["pb"] if c["pb"] is not None else 9e9))
         main = [c for c in cur if c["in_stock"] and c["verified"]]
         best = main[0] if main else None
 
@@ -203,41 +248,45 @@ def build(src: Path):
         hist = []
         for d in pdates:
             day = [o for o in pobs if o["date"] == d and is_main(o)]
-            vals = [eff_unit_price(o) for o in day]
-            vals = [v for v in vals if v[0] is not None]
+            vals = [offer_view(o, unit_word, base) for o in day]
+            vals = [v for v in vals if v["unit"] is not None]
             if not vals:
                 continue
-            bu = min(vals, key=lambda v: v[1] if v[1] is not None else 9e9)
+            bv = min(vals, key=lambda v: v["pb"] if v["pb"] is not None else 9e9)
             ot = [one_time_unit(o) for o in day]
             ot = [x for x in ot if x is not None]
-            hist.append({"date": d, "unit": round(bu[0], 3), "per100g": round(bu[1], 3) if bu[1] else None,
+            hist.append({"date": d, "unit": round(bv["unit"], 3),
+                         "per100g": round(bv["per100g"], 3) if bv["per100g"] else None,
+                         "pb": round(bv["pb"], 4) if bv["pb"] is not None else None,
                          "one_time_unit": round(min(ot), 3) if ot else None})
 
         # 新低價徽章
         badge = None
         if best:
-            prev = [h["per100g"] for h in hist if h["date"] < cur_date and h["per100g"]]
-            ever = num((pdata.get("lowest_unit_price_ever") or {}).get("eur_per_100g"))
+            prev = [h["pb"] for h in hist if h["date"] < cur_date and h["pb"]]
+            ever_key = {"100g": "eur_per_100g", "g": "eur_per_g", "L": "eur_per_l"}[base]
+            ever = num((pdata.get("lowest_unit_price_ever") or {}).get(ever_key))
             prev_min = min(prev) if prev else None
             if prev_min is None:
                 badge = {"kind": "first", "text": "首次紀錄"}
-            elif best["per100g"] < prev_min - 1e-6:
+            elif best["pb"] < prev_min - 1e-6:
                 badge = {"kind": "new_low", "text": "新低價", "prev": prev_min}
-            elif abs(best["per100g"] - prev_min) <= 1e-6:
+            elif abs(best["pb"] - prev_min) <= 1e-6:
                 badge = {"kind": "at_low", "text": "持平歷史低價"}
             else:
-                pct = (best["per100g"] / prev_min - 1) * 100
+                pct = (best["pb"] / prev_min - 1) * 100
                 badge = {"kind": "above", "text": f"比歷史低價高 {pct:.0f}%", "prev": prev_min}
-            if ever and badge["kind"] in ("above",) and best["per100g"] <= ever + 1e-6:
+            if ever and badge["kind"] in ("above",) and best["pb"] <= ever + 1e-6:
                 badge = {"kind": "at_low", "text": "持平歷史低價"}
 
         # 單次購買最低（不需訂閱）
         ot_best = None
         for c in main:
             v = c["unit"] if not c["autoship"] else c["one_time_unit"]
-            if v is not None and (ot_best is None or v / (c["unit_g"] or 1) < ot_best["unit"] / (ot_best["unit_g"] or 1)):
+            vpb = c["pb"] if not c["autoship"] else c["one_time_pb"]
+            if v is not None and vpb is not None and (ot_best is None or vpb < ot_best["pb"]):
                 ot_best = {"shop": c["shop"], "variant": c["variant"], "unit": v, "unit_g": c["unit_g"], "url": c["url"],
-                           "per100g": round(v / c["unit_g"] * 100, 3) if c["unit_g"] else None}
+                           "per100g": vpb if base == "100g" else None, "pb": vpb}
 
         # 註：設定檔中的 "target"（比價目標）已不再使用，也不輸出到網站。
 
@@ -257,6 +306,8 @@ def build(src: Path):
             "desc": meta.get("desc", ""),
             "pack": meta.get("pack", ""),
             "unit_word": unit_word,
+            "base": base,
+            "group": meta.get("group", "food"),
             "image": img_out,
             "date": cur_date,
             "best": best,
@@ -266,7 +317,7 @@ def build(src: Path):
             "offers": cur,
             "main_count": len(main),
             "shop_count": len({c["shop"] for c in main}),
-            "mixed_sizes": len({c["unit_g"] for c in cur}) > 1,
+            "mixed_sizes": len({c["size"] for c in cur}) > 1,
         })
 
     promos_all = [p for p in data.get("sitewide_promos", []) if p.get("date") == max((x.get("date", "") for x in data.get("sitewide_promos", [])), default="")]

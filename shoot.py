@@ -19,6 +19,7 @@ with sync_playwright() as p:
         pg.screenshot(path=str(out / f"{name}-full.png"), full_page=True)
         pg.click(".card .toggle"); pg.click(".card .more"); time.sleep(0.3)
         pg.screenshot(path=str(out / f"{name}-open.png"), full_page=True)
+        pg.evaluate("window.scrollTo(0, document.body.scrollHeight)"); time.sleep(0.8)  # 讓 lazy 圖片載入後再檢查
         broken = pg.evaluate("[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src)")
         sw = pg.evaluate("document.documentElement.scrollWidth")
         print(name, "errors:", errs, "broken imgs:", broken, "scrollWidth:", sw)
