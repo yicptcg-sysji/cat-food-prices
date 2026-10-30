@@ -239,26 +239,7 @@ def build(src: Path):
                 ot_best = {"shop": c["shop"], "variant": c["variant"], "unit": v, "unit_g": c["unit_g"], "url": c["url"],
                            "per100g": round(v / c["unit_g"] * 100, 3) if c["unit_g"] else None}
 
-        target = None
-        if meta.get("target") and best:
-            t = meta["target"]
-            tu = t["price_eur"] / t["units"]
-            # 價格資料四捨五入到小數 3 位，改以「整盒價格」比較（容許 0.5 分誤差），避免剛好達標卻被判未達標
-            equiv = round(best["unit"] * t["units"], 2)
-            reached = equiv <= t["price_eur"] + 0.005
-            gap = 0.0 if reached else best["unit"] - tu
-            target = {"units": t["units"], "price_eur": t["price_eur"], "unit": round(tu, 3),
-                      "reached": reached, "gap_unit": round(max(gap, 0.0), 3),
-                      "gap_pct": round(max(gap, 0.0) / tu * 100, 1),
-                      "equiv_pack": equiv,
-                      "below_pct": round(max(tu - best["unit"], 0.0) / tu * 100, 1) if reached else 0.0,
-                      "conditions": best["conditions"] if reached else []}
-            ug = num(best.get("unit_g"))
-            if ug and best["per100g"] is not None:
-                t100 = tu / ug * 100
-                g100 = 0.0 if reached else best["per100g"] - t100
-                target.update({"unit_g": ug, "per100g": round(t100, 3), "gap_per100g": round(max(g100, 0.0), 3),
-                               "gap_pct": round(max(g100, 0.0) / t100 * 100, 1)})
+        # 註：設定檔中的 "target"（比價目標）已不再使用，也不輸出到網站。
 
         img = meta.get("image")
         img_out = None
@@ -281,7 +262,6 @@ def build(src: Path):
             "best": best,
             "one_time_best": ot_best if (ot_best and best and ot_best["unit"] > best["unit"] + 1e-9) else None,
             "badge": badge,
-            "target": target,
             "history": hist,
             "offers": cur,
             "main_count": len(main),

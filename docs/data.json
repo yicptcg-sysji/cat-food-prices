@@ -3,7 +3,7 @@
  "updated": "2026-10-27",
  "updated_zh": "2026年10月27日",
  "next_zh": "10月29日",
- "generated_zh": "2026-10-27 09:44",
+ "generated_zh": "2026-10-30 11:28",
  "location": "鹿特丹",
  "products": [
   {
@@ -51,23 +51,6 @@
     "kind": "new_low",
     "text": "新低價",
     "prev": 1.552
-   },
-   "target": {
-    "units": 12,
-    "price_eur": 13.0,
-    "unit": 1.083,
-    "reached": true,
-    "gap_unit": 0.0,
-    "gap_pct": 0.0,
-    "equiv_pack": 13.0,
-    "below_pct": 0.0,
-    "conditions": [
-     "滿 €69 免運・運費 €4.95・最低訂單 €14.95",
-     "需訂閱定期配送"
-    ],
-    "unit_g": 85.0,
-    "per100g": 1.275,
-    "gap_per100g": 0.0
    },
    "history": [
     {
@@ -590,7 +573,6 @@
     "text": "新低價",
     "prev": 0.677
    },
-   "target": null,
    "history": [
     {
      "date": "2026-10-25",
@@ -1142,7 +1124,6 @@
     "text": "新低價",
     "prev": 1.057
    },
-   "target": null,
    "history": [
     {
      "date": "2026-10-25",
@@ -1539,7 +1520,6 @@
     "kind": "at_low",
     "text": "持平歷史低價"
    },
-   "target": null,
    "history": [
     {
      "date": "2026-10-25",

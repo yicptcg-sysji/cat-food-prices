@@ -6,8 +6,9 @@
 
 ## 結構
 - `build.py`：讀 prices.json → 產生 `docs/`（index.html 內嵌資料、data.json、assets/）。不會寫入資料來源。
-- `site.config.json`：商品順序、中文名稱、圖片、RC 目標（12 包 €13）。新商品若未設定會自動加入（使用貓咪佔位圖）。
+- `site.config.json`：商品順序、中文名稱、圖片（`target` 欄位已停用，網站不再顯示比價目標）。新商品若未設定會自動加入（使用貓咪佔位圖）。
 - `web/`：版型（index.html、style.css、app.js）。
+- 關注篩選：訪客可在頁首點選要看的商品，選擇存在瀏覽器 localStorage（`catfood.hidden.v1`，記錄「隱藏」的商品 id），新商品預設顯示、已移除的 id 自動忽略。
 - `assets/products/`：商品圖（自行託管，不外連）。新增商品時放一張 480×480 webp 並在 config 指定。
 - `shoot.py`：headless Chrome 截圖檢查（390×844、1280×800）。
 
