@@ -3,8 +3,9 @@
  "updated": "2026-10-31",
  "updated_zh": "2026年10月31日",
  "next_zh": "11月2日",
- "generated_zh": "2026-10-31 12:20",
+ "generated_zh": "2026-10-31 17:20",
  "location": "鹿特丹",
+ "feedback_url": "",
  "products": [
   {
    "id": "rc_kitten_sterilised_gravy",
@@ -37,6 +38,16 @@
      "滿 €39 免運・運費 €3.99",
      "需訂閱定期配送"
     ],
+    "tags": [
+     {
+      "k": "sub",
+      "t": "需定期配送"
+     },
+     {
+      "k": "ship",
+      "t": "滿 €39 免運／運費 €3.99"
+     }
+    ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
@@ -56,6 +67,11 @@
    "badge": {
     "kind": "at_low",
     "text": "持平歷史低價"
+   },
+   "level": {
+    "status": "collecting",
+    "n": 4,
+    "need": 7
    },
    "history": [
     {
@@ -108,6 +124,16 @@
       "滿 €39 免運・運費 €3.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €39 免運／運費 €3.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -135,6 +161,20 @@
       "滿 €69 免運・運費 €3.95・最低訂單 €14.95",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €69 免運／運費 €3.95"
+      },
+      {
+       "k": "cond",
+       "t": "最低消費 €14.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -160,6 +200,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €39 免運"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €39 免運"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -187,6 +233,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
+     ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -222,6 +278,16 @@
       "滿 €50 免運",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €50 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -248,6 +314,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
+     ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -283,6 +359,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -317,6 +403,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -343,6 +439,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
+     ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -371,6 +477,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -396,6 +512,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €35 免運"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €35 免運"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -423,6 +545,12 @@
      "conditions": [
       "滿 €35 免運"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €35 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -448,6 +576,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €49 免運"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €49 免運"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -475,6 +609,12 @@
      "conditions": [
       "滿 €35 免運"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €35 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -500,6 +640,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €40 免運・運費 €4.95"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €40 免運／運費 €4.95"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -527,6 +673,16 @@
      "conditions": [
       "免運",
       "經 CashbackXL 返現 €5.43"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €5.43"
+      },
+      {
+       "k": "ship",
+       "t": "免運"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -561,6 +717,12 @@
      "conditions": [
       "運費 €4.95"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費 €4.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -587,6 +749,16 @@
      "conditions": [
       "免運",
       "經 CashbackXL 返現 €1.55"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €1.55"
+      },
+      {
+       "k": "ship",
+       "t": "免運"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -621,6 +793,12 @@
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -646,6 +824,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €75 免運・運費 €7.20"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €75 免運／運費 €7.20"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -673,6 +857,12 @@
      "conditions": [
       "依賣家而定"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "依賣家而定"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": false,
@@ -698,6 +888,12 @@
      "one_time_pb": null,
      "conditions": [
       "運費 €7.19"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費 €7.19"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -742,6 +938,16 @@
      "滿 €29 免運・運費 €2.99",
      "需訂閱定期配送"
     ],
+    "tags": [
+     {
+      "k": "sub",
+      "t": "需定期配送"
+     },
+     {
+      "k": "ship",
+      "t": "滿 €29 免運／運費 €2.99"
+     }
+    ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
@@ -761,6 +967,11 @@
    "badge": {
     "kind": "at_low",
     "text": "持平歷史低價"
+   },
+   "level": {
+    "status": "collecting",
+    "n": 4,
+    "need": 7
    },
    "history": [
     {
@@ -813,6 +1024,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -838,6 +1059,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -865,6 +1092,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -890,6 +1123,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -917,6 +1156,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -942,6 +1187,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -969,6 +1220,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -994,6 +1251,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -1021,6 +1284,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1046,6 +1315,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -1073,6 +1348,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1098,6 +1379,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -1126,6 +1413,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1153,6 +1450,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1178,6 +1485,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -1205,6 +1518,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.14"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.14"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1239,6 +1562,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.14"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.14"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1274,6 +1607,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": false,
      "verified": true,
@@ -1300,6 +1643,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.19"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.19"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1335,6 +1688,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": false,
      "verified": true,
@@ -1361,6 +1724,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.20"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.20"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1396,6 +1769,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": false,
      "verified": true,
@@ -1422,6 +1805,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.22"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.22"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1456,6 +1849,12 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": false,
      "verified": true,
@@ -1482,6 +1881,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.12"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.12"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1516,6 +1925,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.20"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.20"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1567,6 +1986,16 @@
      "Amazon 出售並出貨；免運",
      "經 CashbackXL 返現 €1.94"
     ],
+    "tags": [
+     {
+      "k": "cash",
+      "t": "CashbackXL 返現 €1.94"
+     },
+     {
+      "k": "ship",
+      "t": "免運（首單或滿 €25）"
+     }
+    ],
     "new_customer": {
      "portal": "CashbackXL",
      "rate_pct": 15.0,
@@ -1586,6 +2015,11 @@
     "kind": "new_low",
     "text": "新低價",
     "prev": 0.617
+   },
+   "level": {
+    "status": "collecting",
+    "n": 4,
+    "need": 7
    },
    "history": [
     {
@@ -1638,6 +2072,16 @@
       "Amazon 出售並出貨；免運",
       "經 CashbackXL 返現 €1.94"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €1.94"
+      },
+      {
+       "k": "ship",
+       "t": "免運（首單或滿 €25）"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 15.0,
@@ -1671,6 +2115,16 @@
      "conditions": [
       "Amazon 出售並出貨；免運",
       "經 CashbackXL 返現 €1.96"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €1.96"
+      },
+      {
+       "k": "ship",
+       "t": "免運（首單或滿 €25）"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1706,6 +2160,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1733,6 +2197,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1759,6 +2233,16 @@
      "conditions": [
       "Amazon 出售並出貨；免運",
       "經 CashbackXL 返現 €2.01"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €2.01"
+      },
+      {
+       "k": "ship",
+       "t": "免運（首單或滿 €25）"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1794,6 +2278,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1821,6 +2315,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -1847,6 +2351,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €1.41"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €1.41"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1882,6 +2396,16 @@
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €1.41"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €1.41"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -1915,6 +2439,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.36"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.36"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -1950,6 +2484,16 @@
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.36"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.36"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -1983,6 +2527,16 @@
      "conditions": [
       "Amazon 出售並出貨；免運",
       "經 CashbackXL 返現 €1.26"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €1.26"
+      },
+      {
+       "k": "ship",
+       "t": "免運（首單或滿 €25）"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2018,6 +2572,16 @@
       "Amazon 出售並出貨；免運",
       "經 CashbackXL 返現 €1.30"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €1.30"
+      },
+      {
+       "k": "ship",
+       "t": "免運（首單或滿 €25）"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 15.0,
@@ -2052,6 +2616,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2077,6 +2651,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -2105,6 +2685,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2130,6 +2720,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -2158,6 +2754,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2184,6 +2790,16 @@
      "conditions": [
       "Amazon 出售並出貨；免運",
       "經 CashbackXL 返現 €1.43"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "CashbackXL 返現 €1.43"
+      },
+      {
+       "k": "ship",
+       "t": "免運（首單或滿 €25）"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2219,6 +2835,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2245,6 +2871,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.99"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.99"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2280,6 +2916,16 @@
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.99"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.99"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -2313,6 +2959,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.25"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.25"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2348,6 +3004,16 @@
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.25"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.25"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -2382,6 +3048,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2409,6 +3085,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2435,6 +3121,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.55"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.55"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2469,6 +3165,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.55"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.55"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2504,6 +3210,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2530,6 +3246,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.14"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.14"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2565,6 +3291,16 @@
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.14"
      ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.14"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -2598,6 +3334,12 @@
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2623,6 +3365,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -2650,6 +3398,12 @@
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2676,6 +3430,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.15"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.15"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2710,6 +3474,12 @@
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2735,6 +3505,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €64.90 免運・運費 €6.90"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €64.90 免運／運費 €6.90"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -2763,6 +3539,20 @@
       "滿 €69 免運・運費 €3.95・最低訂單 €14.95",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €69 免運／運費 €3.95"
+      },
+      {
+       "k": "cond",
+       "t": "最低消費 €14.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2790,6 +3580,20 @@
       "滿 €69 免運・運費 €3.95・最低訂單 €14.95",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €69 免運／運費 €3.95"
+      },
+      {
+       "k": "cond",
+       "t": "最低消費 €14.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2816,6 +3620,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "經 ShopBuddies 返現 €0.28"
+     ],
+     "tags": [
+      {
+       "k": "cash",
+       "t": "ShopBuddies 返現 €0.28"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -2866,6 +3680,12 @@
     "conditions": [
      "滿 €45 免運・運費 €0–8.25"
     ],
+    "tags": [
+     {
+      "k": "ship",
+      "t": "滿 €45 免運／運費 €0–8.25"
+     }
+    ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
@@ -2877,6 +3697,11 @@
    "badge": {
     "kind": "at_low",
     "text": "持平歷史低價"
+   },
+   "level": {
+    "status": "collecting",
+    "n": 4,
+    "need": 7
    },
    "history": [
     {
@@ -2928,6 +3753,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -2953,6 +3784,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -2980,6 +3817,12 @@
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3005,6 +3848,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €45 免運・運費 €0–8.25"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €45 免運／運費 €0–8.25"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3032,6 +3881,12 @@
      "conditions": [
       "滿 €65 免運"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €65 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3058,6 +3913,12 @@
      "conditions": [
       "運費未知"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費未知"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3083,6 +3944,12 @@
      "one_time_pb": null,
      "conditions": [
       "運費未知"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費未知"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3111,6 +3978,20 @@
       "滿 €69 免運・運費 €3.95・最低訂單 €14.95",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €69 免運／運費 €3.95"
+      },
+      {
+       "k": "cond",
+       "t": "最低消費 €14.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3137,6 +4018,12 @@
      "conditions": [
       "滿 €49 免運"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €49 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": false,
@@ -3162,6 +4049,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €49 免運"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €49 免運"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3206,6 +4099,16 @@
      "滿 €29 免運・運費 €2.99",
      "需訂閱定期配送"
     ],
+    "tags": [
+     {
+      "k": "sub",
+      "t": "需定期配送"
+     },
+     {
+      "k": "ship",
+      "t": "滿 €29 免運／運費 €2.99"
+     }
+    ],
     "new_customer": {
      "portal": "CashbackXL",
      "rate_pct": 10.0,
@@ -3232,6 +4135,11 @@
    "badge": {
     "kind": "at_low",
     "text": "持平歷史低價"
+   },
+   "level": {
+    "status": "collecting",
+    "n": 2,
+    "need": 7
    },
    "history": [
     {
@@ -3270,6 +4178,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": {
       "portal": "CashbackXL",
       "rate_pct": 10.0,
@@ -3304,6 +4222,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3330,6 +4258,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
+     ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -3365,6 +4303,16 @@
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
      ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3391,6 +4339,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
+     ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": {
       "portal": "CashbackXL",
@@ -3425,6 +4383,16 @@
      "conditions": [
       "滿 €29 免運・運費 €2.99",
       "需訂閱定期配送"
+     ],
+     "tags": [
+      {
+       "k": "sub",
+       "t": "需定期配送"
+      },
+      {
+       "k": "ship",
+       "t": "滿 €29 免運／運費 €2.99"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3468,6 +4436,12 @@
     "conditions": [
      "滿 €59 免運・運費 €3.95"
     ],
+    "tags": [
+     {
+      "k": "ship",
+      "t": "滿 €59 免運／運費 €3.95"
+     }
+    ],
     "new_customer": null,
     "in_stock": true,
     "verified": true,
@@ -3479,6 +4453,11 @@
    "badge": {
     "kind": "at_low",
     "text": "持平歷史低價"
+   },
+   "level": {
+    "status": "collecting",
+    "n": 2,
+    "need": 7
    },
    "history": [
     {
@@ -3516,6 +4495,12 @@
      "conditions": [
       "滿 €59 免運・運費 €3.95"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運／運費 €3.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3542,6 +4527,12 @@
      "conditions": [
       "滿 €59 免運"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3568,6 +4559,12 @@
      "conditions": [
       "滿 €59 免運"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3593,6 +4590,12 @@
      "one_time_pb": null,
      "conditions": [
       "運費未知"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費未知"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3620,6 +4623,12 @@
      "conditions": [
       "滿 €59 免運・運費 €3.95"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運／運費 €3.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3645,6 +4654,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €59 免運"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3672,6 +4687,12 @@
      "conditions": [
       "運費未知"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費未知"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3697,6 +4718,12 @@
      "one_time_pb": null,
      "conditions": [
       "滿 €59 免運"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3724,6 +4751,12 @@
      "conditions": [
       "滿 €59 免運・運費 €3.95"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "滿 €59 免運／運費 €3.95"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": true,
@@ -3749,6 +4782,12 @@
      "one_time_pb": null,
      "conditions": [
       "運費 €6.26"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費 €6.26"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3776,6 +4815,12 @@
      "conditions": [
       "運費 €6.26"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費 €6.26"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": false,
@@ -3801,6 +4846,12 @@
      "one_time_pb": null,
      "conditions": [
       "比利時店，寄荷蘭運費未核實"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "比利時店，寄荷蘭運費未核實"
+      }
      ],
      "new_customer": null,
      "in_stock": true,
@@ -3828,6 +4879,12 @@
      "conditions": [
       "運費未知"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費未知"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": false,
@@ -3854,6 +4911,12 @@
      "conditions": [
       "運費 €6.26"
      ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "運費 €6.26"
+      }
+     ],
      "new_customer": null,
      "in_stock": true,
      "verified": false,
@@ -3879,6 +4942,12 @@
      "one_time_pb": null,
      "conditions": [
       "依賣家而定"
+     ],
+     "tags": [
+      {
+       "k": "ship",
+       "t": "依賣家而定"
+      }
      ],
      "new_customer": null,
      "in_stock": true,

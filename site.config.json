@@ -2,6 +2,7 @@
   "source_dir": "/cursor/stores/store-07c67034-b23d-4a5a-9f26-e791b261bad1/cat-wetfood",
   "site_title": "幼貓濕食比價",
   "update_interval_days": 2,
+  "feedback_url": "",
   "product_order": [
     "rc_kitten_sterilised_gravy",
     "macs_kitten",

@@ -89,6 +89,32 @@ def clean_shipping(s):
     return "・".join(parts)
 
 
+def ship_tags(s):
+    """運費字串 → 分類標籤：[{"k": "ship"|"cond", "t": 文字}]。"""
+    s = s or ""
+    tags = []
+    free = re.search(r"免運門檻\s*€\s*([\d.,]+)", s)
+    fee = re.search(r"(?<!免)運費\s*€\s*([\d.,]+(?:[–-][\d.,]+)?)", s)
+    if free and fee:
+        tags.append({"k": "ship", "t": f"滿 €{free.group(1)} 免運／運費 €{fee.group(1)}"})
+    elif free:
+        tags.append({"k": "ship", "t": f"滿 €{free.group(1)} 免運"})
+    elif fee:
+        tags.append({"k": "ship", "t": f"運費 €{fee.group(1)}"})
+    for m in re.finditer(r"(取貨點|宅配)免運\s*€\s*([\d.,]+)", s):
+        tags.append({"k": "ship", "t": f"{m.group(1)}滿 €{m.group(2)} 免運"})
+    m = re.search(r"最低訂單\s*€\s*([\d.,]+)", s)
+    if m:
+        tags.append({"k": "cond", "t": f"最低消費 €{m.group(1)}"})
+    if not tags:
+        t = clean_shipping(s)
+        seg = [x.strip() for x in re.split(r"[；;]", s) if "免運" in x]
+        if seg and "；" in t:
+            t = seg[-1].replace("（", "（").strip()
+        tags.append({"k": "ship", "t": t})
+    return tags
+
+
 def short_portal(p):
     return strip_paren(p) if p else None
 
@@ -154,11 +180,15 @@ def offer_view(o, unit_word, base="100g"):
     k = basis_key(b)
     conds = []
     conds.append(clean_shipping(o.get("shipping")))
+    # 分類標籤（網站依類型上色）：ship 運費、sub 訂閱、cond 其他條件、cash 返現；新客首單與單次價由 app.js 加上
+    tags = ship_tags(o.get("shipping"))
     if k in AUTOSHIP_BASES:
         conds.append("需訂閱定期配送")
+        tags.insert(0, {"k": "sub", "t": "需定期配送"})
     if k == "cashback" and o.get("cashback_portal"):
         cb = num(o.get("cashback_eur"))
         conds.append(f"經 {short_portal(o['cashback_portal'])} 返現" + (f" €{cb:.2f}" if cb else ""))
+        tags.insert(0, {"k": "cash", "t": f"{short_portal(o['cashback_portal'])} 返現" + (f" €{cb:.2f}" if cb else "")})
     nc = o.get("cashback_new_customer")
     new_cust = None
     if isinstance(nc, dict) and num(nc.get("after_cashback_eur_per_unit")) is not None:
@@ -195,6 +225,7 @@ def offer_view(o, unit_word, base="100g"):
         "one_time_per100g": per100(ot_show) if base == "100g" else None,
         "one_time_pb": (per100(ot_show) if base == "100g" else per_base(ot_show, o, base)),
         "conditions": [c for c in conds if c],
+        "tags": [t for t in tags if t["t"]],
         "new_customer": new_cust,
         "in_stock": o.get("stock") == "in_stock",
         "verified": o.get("status") == "verified",
@@ -202,6 +233,47 @@ def offer_view(o, unit_word, base="100g"):
         "url": o.get("url"),
         "detail": "；".join(x for x in (o.get("promo"), o.get("note")) if x),
     }
+
+
+LEVEL_MIN_POINTS = 7      # 少於這麼多天的歷史就不顯示價格水準（避免誤導）
+LEVEL_WINDOW_DAYS = 90    # 只看最近 90 天
+
+
+def percentile(vals, q):
+    """線性內插百分位數（同 numpy 預設）。"""
+    v = sorted(vals)
+    if not v:
+        return None
+    i = (len(v) - 1) * q
+    lo, hi = int(i), min(int(i) + 1, len(v) - 1)
+    return v[lo] + (v[hi] - v[lo]) * (i - lo)
+
+
+def price_level(hist, cur_pb, cur_date):
+    """依該商品自己的「每日最低有效單價」歷史，判斷今日最低價偏低／一般／偏高。
+    低＝≤ 第 25 百分位，高＝≥ 第 75 百分位；資料不足時只回報累積天數。"""
+    if cur_pb is None:
+        return None
+    start = (dt.date.fromisoformat(cur_date) - dt.timedelta(days=LEVEL_WINDOW_DAYS)).isoformat()
+    vals = [h["pb"] for h in hist if h.get("pb") is not None and start < h["date"] <= cur_date]
+    n = len(vals)
+    if n < LEVEL_MIN_POINTS:
+        return {"status": "collecting", "n": n, "need": LEVEL_MIN_POINTS}
+    p25, p75 = percentile(vals, .25), percentile(vals, .75)
+    lo, hi = min(vals), max(vals)
+    eps = 1e-6
+    if p75 - p25 <= max(eps, p25 * 0.005):   # 價格幾乎沒變動
+        level = "typical"
+    elif cur_pb <= p25 + eps:
+        level = "low"
+    elif cur_pb >= p75 - eps:
+        level = "high"
+    else:
+        level = "typical"
+    r = lambda x: round(x, 4)
+    return {"status": "ok", "n": n, "level": level, "cur": r(cur_pb),
+            "min": r(lo), "p25": r(p25), "p75": r(p75), "max": r(hi),
+            "since": min(h["date"] for h in hist if start < h["date"] <= cur_date)}
 
 
 def fmt_date_zh(d):
@@ -313,6 +385,7 @@ def build(src: Path):
             "best": best,
             "one_time_best": ot_best if (ot_best and best and ot_best["unit"] > best["unit"] + 1e-9) else None,
             "badge": badge,
+            "level": price_level(hist, best["pb"] if best else None, cur_date),
             "history": hist,
             "offers": cur,
             "main_count": len(main),
@@ -334,6 +407,8 @@ def build(src: Path):
         "next_zh": f"{nxt.month}月{nxt.day}日",
         "generated_zh": now.strftime("%Y-%m-%d %H:%M"),
         "location": "鹿特丹",
+        # 意見回饋 Google 表單網址：填在 site.config.json 的 "feedback_url"；空字串時網站不顯示入口
+        "feedback_url": (cfg.get("feedback_url") or "").strip(),
         "products": products,
         "promos": promos,
         "details": {

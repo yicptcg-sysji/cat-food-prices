@@ -61,7 +61,10 @@
 
   html.push(details());
   $("#app").innerHTML = html.join("");
-  $("#foot").innerHTML = '<p>價格取「優惠價（定期配送、折扣）」與「返現後價格」中較低者，兩者不疊加。返現以既有客戶費率計算。</p><p>所有商店皆可寄送至鹿特丹；實際價格以商店頁面為準。網站產生時間 '+esc(D.generated_zh)+'（阿姆斯特丹時間）。</p>';
+  var links=[];
+  if(D.feedback_url) links.push('<a class="fb-btn" href="'+esc(D.feedback_url)+'" target="_blank" rel="noopener">✍️ 意見回饋／想新增商品</a>');
+  links.push('<a class="tip-link" href="https://donate.stripe.com/14A28q0Hk2EweXg6pc1wY00" target="_blank" rel="noopener">☕ 贊助本站</a>');
+  $("#foot").innerHTML = '<div class="foot-links">'+links.join("")+'</div><p>價格取「優惠價（定期配送、折扣）」與「返現後價格」中較低者，兩者不疊加。返現以既有客戶費率計算。</p><p>所有商店皆可寄送至鹿特丹；實際價格以商店頁面為準。網站產生時間 '+esc(D.generated_zh)+'（阿姆斯特丹時間）。</p>';
 
   function applyFocus(){
     var shown=0;
@@ -107,6 +110,30 @@
     });
   });
 
+  // 標籤：同類型同顏色（ship 運費、sub 訂閱、cond 其他條件、cash 返現、deal 新客首單、once 單次購買）
+  function tagsHtml(o,p,noOnce){
+    var u=p.unit_word, t=(o.tags||[]).slice();
+    if(o.new_customer) t.push({k:"deal",t:'新客首單 '+(pbv(o.new_customer)!=null?eur(pbv(o.new_customer),bd(p))+'/'+bu(p):eur(o.new_customer.unit)+'/'+u)});
+    var otp=o.one_time_pb!=null?o.one_time_pb:o.one_time_per100g;
+    if(o.one_time_unit&&!noOnce) t.push({k:"once",t:'單次購買 '+(otp!=null?eur(otp,bd(p))+'/'+bu(p):eur(o.one_time_unit)+'/'+u)});
+    return t.map(function(x){return '<span class="tag t-'+esc(x.k)+'">'+esc(x.t)+'</span>';}).join("");
+  }
+
+  // 價格水準膠囊（類似 Google 機票「目前價格偏低」）：依該商品自己的每日最低價歷史
+  function levelHtml(p){
+    var LV={low:"偏低",typical:"一般",high:"偏高"};
+    var L=p.level; if(!L) return "";
+    if(L.status!=="ok") return '<div class="level collecting"><span class="lv-h">價格水準</span>資料累積中（已有 '+L.n+'／'+L.need+' 天）</div>';
+    // 三段等寬：最低–25%、25–75%、75%–最高；標記在所屬區段內線性定位
+    function seg(v,a,b){return b>a?Math.min(1,Math.max(0,(v-a)/(b-a))):0.5;}
+    var c=L.cur, pos = c<=L.p25 ? seg(c,L.min,L.p25)/3 : (c>=L.p75 ? (2+seg(c,L.p75,L.max))/3 : (1+seg(c,L.p25,L.p75))/3);
+    pos=Math.min(0.97,Math.max(0.03,pos));
+    var d=bd(p), un='/'+bu(p);
+    return '<div class="level lv-'+esc(L.level)+'"><div class="lv-top"><span class="lv-h">目前價格</span><b class="lv-tag">'+LV[L.level]+'</b><span class="lv-n">依過去 '+L.n+' 天紀錄</span></div>'+
+      '<div class="lv-bar" role="img" aria-label="今日 '+eur(c,d)+un+'，價格'+LV[L.level]+'；偏低 ≤ '+eur(L.p25,d)+'，偏高 ≥ '+eur(L.p75,d)+'"><span class="s1"></span><span class="s2"></span><span class="s3"></span><i style="left:'+(pos*100).toFixed(1)+'%"></i></div>'+
+      '<div class="lv-scale num"><span>偏低 ≤ '+eur(L.p25,d)+'</span><span>一般</span><span>偏高 ≥ '+eur(L.p75,d)+'</span></div></div>';
+  }
+
   function card(p,i){
     var b=p.best, u=p.unit_word;
     var img = p.image ? esc(p.image) : PLACEHOLDER;
@@ -123,7 +150,8 @@
         ? '<div class="lbl">'+bz(p)+'最低價</div><div class="val num">'+eur(pbv(b),bd(p))+'<small>/'+bu(p)+'</small></div><div class="per num">'+eur(b.unit)+'/'+esc(u)+(b.size?'（'+esc(b.size)+'）':'')+'</div>'
         : '<div class="lbl">最低每'+esc(u)+'</div><div class="val num">'+eur(b.unit)+'<small>/'+esc(u)+'</small></div>')+'</div>';
       s += '<a class="buy" href="'+esc(b.url)+'" target="_blank" rel="noopener nofollow">前往 '+esc(b.shop)+' '+ARROW+'</a></div>';
-      s += '<div class="where"><b>'+esc(b.shop)+'</b>・'+variant(b.variant)+'・'+esc(b.basis)+' <span class="num">'+eur(b.price)+'</span><span class="cond">'+esc(b.conditions.join("・"))+'</span></div>';
+      s += '<div class="where"><b>'+esc(b.shop)+'</b>・'+variant(b.variant)+'・'+esc(b.basis)+' <span class="num">'+eur(b.price)+'</span><div class="c">'+tagsHtml(b,p,!!p.one_time_best)+'</div></div>';
+      s += levelHtml(p);
       if(p.one_time_best){
         var o=p.one_time_best;
         s += '<div class="alt">不想訂閱？單次購買最低：<a href="'+esc(o.url)+'" target="_blank" rel="noopener nofollow">'+esc(o.shop)+'</a> '+variant(o.variant)+' '+(pbv(o)!=null?pB(p,pbv(o)):'<span class="num">'+eur(o.unit)+'</span>/'+esc(u))+'</div>';
@@ -145,10 +173,7 @@
     groups.forEach(function(g){
       var o=g.items[0], main=g.main;
       if(main) rank++;
-      var tags = o.conditions.map(function(c){return '<span class="tag">'+esc(c)+'</span>';}).join("");
-      if(o.new_customer) tags += '<span class="tag nc">新客首單 '+(pbv(o.new_customer)!=null?eur(pbv(o.new_customer),bd(p))+'/'+bu(p):eur(o.new_customer.unit)+'/'+esc(u))+'</span>';
-      var otp=o.one_time_pb!=null?o.one_time_pb:o.one_time_per100g;
-      if(o.one_time_unit) tags += '<span class="tag">單次 '+(otp!=null?eur(otp,bd(p))+'/'+bu(p):eur(o.one_time_unit)+'/'+esc(u))+'</span>';
+      var tags = tagsHtml(o,p);
       var st = !o.in_stock ? "缺貨" : (o.status==="partly_verified" ? "部分核實" : (o.verified ? "" : "未核實"));
       var rest = g.items.slice(1).map(function(x){return variant(x.variant)+' '+(pbv(x)!=null?'<b class="num">'+eur(pbv(x),bd(p))+'</b>/'+bu(p):eur(x.unit)+'/'+esc(u));}).join("、");
       var bigv = pbv(o)!=null ? eur(pbv(o),bd(p))+'<span class="h">/'+bu(p)+'</span>' : eur(o.unit)+'<span class="h">/'+esc(u)+'</span>';

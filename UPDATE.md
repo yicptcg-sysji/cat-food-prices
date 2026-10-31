@@ -35,3 +35,9 @@ git add -A && git commit -m "更新價格 $(date +%F)" && git push   # GitHub Pa
 ```bash
 npx -y @shipstatic/ship ./docs
 ```
+
+## 意見回饋（Google 表單）
+在 `site.config.json` 的 `"feedback_url"` 填入表單網址（例如 `"https://forms.gle/xxxx"`），執行 `python3 build.py` 後推送。空字串時網站不顯示入口。
+
+## 價格水準膠囊
+`build.py` 的 `price_level()`：取該商品最近 90 天「每日最低有效單價」（與走勢圖相同），≥ 7 天才顯示；今日 ≤ 第 25 百分位＝偏低、≥ 第 75 百分位＝偏高、其餘＝一般。不足 7 天顯示「資料累積中」。
