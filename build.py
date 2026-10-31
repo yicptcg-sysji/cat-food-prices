@@ -421,6 +421,8 @@ def build(src: Path):
     (OUT / "data.json").write_text(json.dumps(site, ensure_ascii=False, indent=1), encoding="utf-8")
     for f in ("style.css", "app.js"):
         shutil.copy2(ROOT / "web" / f, OUT / "assets" / f)
+    for f in (ROOT / "web" / "icons").iterdir():
+        shutil.copy2(f, OUT / f.name)
     ver = now.strftime("%Y%m%d%H%M")
     html = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
     html = html.replace("__DATA__", js.replace("</", "<\\/")).replace("__VER__", ver)
